@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import BG from './assets/bg.svg';
 import './App.css';
+import MainLayout from './Layout/MainLayout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App w-100 h-100 position-relative">
+      <BackgroundImage />
+      <MainLayout />
     </div>
   );
 }
 
 export default App;
+
+const BackgroundImage = () => {
+  return <div className="position-absolute" style={{ top: 80, left: -120, zIndex: -100 }}>
+    <img src={BG} className="w-100 h-100" />
+  </div>
+}

@@ -1,0 +1,11 @@
+<svg id="Component_3_1" data-name="Component 3 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="15" cy="15" r="15" transform="translate(1525 96)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectangle_4" data-name="Rectangle 4" width="32" height="32" fill="rgba(255,255,255,0)"/>
+  <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(-1524 -95)" clip-path="url(#clip-path)">
+    <path id="user_1_" data-name="user (1)" d="M3.408,22.351A22,22,0,0,0,12.8,24.8a19.893,19.893,0,0,0,9.406-2.457A.4.4,0,0,0,22.4,22a12.879,12.879,0,0,0-2.788-8.322,9.065,9.065,0,0,0-4.577-2.983,5.2,5.2,0,1,0-4.469,0,9.066,9.066,0,0,0-4.577,2.983A12.879,12.879,0,0,0,3.2,22a.4.4,0,0,0,.208.351ZM8.4,6a4.4,4.4,0,1,1,4.4,4.4A4.4,4.4,0,0,1,8.4,6ZM6.6,14.193a7.917,7.917,0,0,1,12.4,0,12.008,12.008,0,0,1,2.6,7.574A19.576,19.576,0,0,1,12.8,24,21.437,21.437,0,0,1,4,21.757,12.006,12.006,0,0,1,6.6,14.193Z" transform="translate(1527.2 98.201)" fill="#3e3e70"/>
+  </g>
+</svg>
