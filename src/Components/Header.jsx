@@ -8,13 +8,13 @@ function Header() {
         <div className="container-fluid px-0 shadow bg-white">
             <div className="container-xl">
                 <div className="d-flex justify-content-between">
-                    <div className="cp">
+                    <div className="cp"  style={{width:'120px',height:'60px'}}>
                         <img src={Logo} className="w-100 h-100"/>
                     </div>
-                    <div className="w-50 my-auto">
+                    <div className="w-50 my-auto d-none d-lg-inline-block">
                         <TextInputWithIcon />
                     </div>
-                    <div className="my-auto">
+                    <div className="my-auto d-none d-lg-inline-block">
                         <img className="mx-2 cp" src={NewsIcon} alt=""/>
                         <img className="mx-2 cp" src={MsgIcon} alt=""/>
                         <img className="mx-2 cp" src={UserIcon} alt=""/>
@@ -35,7 +35,7 @@ const TextInputWithIcon = () => {
             width: "100%",
             border: "1px solid var(--nb_primary__light)",
             borderRadius: "8px",
-            height: 50,
+            height: 45,
         },
         input: {
             border: "none",

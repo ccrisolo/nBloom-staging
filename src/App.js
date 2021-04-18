@@ -14,7 +14,7 @@ function App() {
 export default App;
 
 const BackgroundImage = () => {
-  return <div className="position-absolute" style={{ top: 80, left: -120, zIndex: -100 }}>
+  return <div className="position-absolute" style={{ top: 50, left: -120, zIndex: -100 }}>
     <img src={BG} className="w-100 h-100" />
   </div>
 }

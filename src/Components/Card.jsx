@@ -4,7 +4,7 @@ import AudioPlayer from './AudioPlayer'
 
 function Card() {
     return (
-        <div className="shadow p-5 w-100 bg-white my-2 br" style={{ height: '500px' }}>
+        <div className="shadow p-5 w-100 bg-white my-4 br" style={{ height: '500px' }}>
             <div className="d-flex justify-content-between w-100">
                 <div className="d-flex">
                     <div>
@@ -30,10 +30,10 @@ function Card() {
                     <img src={ShareIcon} alt="" />
                 </div>
             </div>
-            <div className="ms-3 text-start my-3">
+            <div className="ms-5 text-start my-3">
                 <span className="fw-bold">Purpose :</span> My purpose is
             </div>
-            <div className="ms-3 text-start my-3">
+            <div className="ms-5 text-start my-3">
                 <span className="fw-bold">Growth areas to focus on : </span> Creativity and leave feedback 
             </div>
         </div>
