@@ -1,4 +1,5 @@
 import { Switch, Route, useHistory, BrowserRouter } from "react-router-dom";
+import AccountPage from "../Pages/Auth/AccountPage";
 import HomePage from "../Pages/HomePage";
 import MainPage from "../Pages/MainPage";
 
@@ -7,7 +8,7 @@ function MainLayout() {
         <BrowserRouter >
             <Switch>
                 <Route path="/dashboard" component={HomePage} />
-                <Route path="/" exact component={MainPage} />
+                <Route path="/" exact component={AccountPage} />
             </Switch>
         </BrowserRouter>
     )
