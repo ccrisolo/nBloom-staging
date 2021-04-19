@@ -35,11 +35,19 @@ body {
   border-radius: 8px;
   border:none !important;
   outline: none !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
 }
 
 .btn-primary{
   color:white !important;
   background:#3E3E70 !important;
+}
+
+.btn-rounded{
+  border:.1px solid #000 !important;
+  border-radius: 50px !important;
+  
 }
 
 .btn-outline{

@@ -1,0 +1,7 @@
+<svg id="Component_50" data-name="Component 50" xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49">
+  <circle id="Ellipse_3" data-name="Ellipse 3" cx="24.5" cy="24.5" r="24.5" fill="#fff" opacity="0.32"/>
+  <g id="ico_24_arrows_chevron_left" data-name="ico / 24 / arrows / chevron_left" transform="translate(13 13)">
+    <rect id="Bounding_box" data-name="Bounding box" width="24" height="24" fill="rgba(255,255,255,0)"/>
+    <path id="Icon_color" data-name="Icon color" d="M.33,10.079a1.125,1.125,0,0,1-.33-.8v-.57a1.155,1.155,0,0,1,.33-.8L8.042.222a.75.75,0,0,1,1.065,0l1.065,1.065a.735.735,0,0,1,0,1.05L3.5,9l6.677,6.662a.75.75,0,0,1,0,1.065l-1.065,1.05a.75.75,0,0,1-1.065,0Z" transform="translate(5.803 3.001)"/>
+  </g>
+</svg>
