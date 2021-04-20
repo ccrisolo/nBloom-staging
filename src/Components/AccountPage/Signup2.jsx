@@ -5,8 +5,10 @@ import PasswordInput from '../PasswordInput'
 import TextInput from '../TextInput'
 import { changeAccountPageContext } from '../../store/actions/UI'
 import { updateUserCred } from '../../store/actions/account'
+import { useHistory } from 'react-router-dom'
 
 function Signup2() {
+    const history = useHistory();
     const dispatch = useDispatch()
     const accountPageContext = useSelector(state => state.ui.accountPageContext);
     const name = useSelector(state => state.account.name);
@@ -33,10 +35,12 @@ function Signup2() {
                     How would you like to start journey?
                 </div>
                 <div className="col-12 my-3 text-center">
-                    <button className="btn w-50 py-2" style={{ background: '#EB90A2',textTransform:'unset' }}>Be a coach</button>
+                    <button
+                        onClick={() => history.push('/coach/create')}
+                        className="btn w-50 py-2" style={{ background: '#EB90A2', textTransform: 'unset' }}>Be a coach</button>
                 </div>
                 <div className="col-12 my-3 text-center">
-                    <button className="btn w-50 py-2" style={{ background: '#C5ADEE',textTransform:'unset' }}>Be a coach</button>
+                    <button className="btn w-50 py-2" style={{ background: '#C5ADEE', textTransform: 'unset' }}>Be a coach</button>
                 </div>
             </div>
         </div>
