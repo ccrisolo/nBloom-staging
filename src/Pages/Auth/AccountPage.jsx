@@ -9,9 +9,12 @@ import GoogleIcom from '../../assets/google.svg';
 import LinkedInIcon from '../../assets/linkedin.svg';
 import TextInput from '../../Components/TextInput';
 import PasswordInput from '../../Components/PasswordInput';
+import '../../styles/account.css'
+import Modal from '../../Components/Modal';
 
 function AccountPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
+    const [showForgotPassword, setShowForgotPassword] = useState(false)
     let onSlideChange = (e) => {
         setCurrentSlide(e);
     };
@@ -25,9 +28,26 @@ function AccountPage() {
     };
     return (
         <div>
+            <Modal
+                onClose={() => setShowForgotPassword(false)}
+                show={showForgotPassword}
+                body={
+                    <div className="p-3" >
+                        <div className="float-end mx-2 nb-text-primary">
+                            <i class="fas fa-times cp" onClick={() => setShowForgotPassword(false)}></i>
+                        </div>
+                        <form>
+                            <TextInput placeholder="Enter email" label="Forgot Password" />
+                            <div className="d-flex justify-content-center my-4">
+                                <button type="submit" className="btn btn-primary px-5 mx-2">Send</button>
+                                <button type="button" className="btn btn-outline px-5 mx-2" onClick={() => setShowForgotPassword(false)}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                } />
             <Header context="login" />
-            <div className="row overflow-hidden" style={{ height: 'calc(100vh - 60px)' }}>
-                <div className="col-7 position-relative p-0 overflow-hidden">
+            <div className="row account-page">
+                <div className="col-12 col-lg-7 position-relative p-0 left-panel d-none d-lg-inline-block">
                     <div className="w-100">
                         <Carousel
                             autoPlay={true}
@@ -82,9 +102,9 @@ function AccountPage() {
                         </div>
                     </div>
                 </div>
-                <div className="col-5 px-5" style={{ borderLeft: '1px solid #000', overflow: 'hidden' }}>
-                    <div>
-                        <div className="text-center fw-bold fs-2">
+                <div className="col-12 col-lg-5 px-0 px-lg-5 right-panel">
+                    <div className="container-fluid">
+                        <div className="text-center fw-bold fs-2 my-2">
                             Login
                         </div>
                         <div className="text-center fw-bold">
@@ -106,10 +126,10 @@ function AccountPage() {
                                         <input type="checkbox" defaultChecked={false} /> Keep me signed in
                                     </label>
                                 </div>
-                                <div className="fs-6">Forgot password ?</div>
+                                <div className="fs-6" onClick={() => setShowForgotPassword(true)}>Forgot password ?</div>
                             </div>
                             <div className="text-center">
-                                <button className="btn btn-primary w-50 my-4 br py-2">Next </button>
+                                <button className="btn btn-secondary w-50 my-4 br py-2">Next </button>
                             </div>
                         </form>
                         <div className="position-relative my-3 mx-5" style={{ border: ".1px solid rgba(0,0,0,0.2)" }}>
@@ -127,7 +147,7 @@ function AccountPage() {
                                     </button>
                             </div>
                         </div>
-                        <div className="cp mt-1">
+                        <div className="cp mt-1 mt-lg-5 pt-lg-4">
                             New to 'nBloom? <span >Sign up here</span>
                         </div>
                     </div>
@@ -141,10 +161,8 @@ export default AccountPage
 
 function Slide({ content }) {
     return (
-        <div className="h-100 w-100  position-relative">
-            <div className="">
-                <img src={content} alt="" className="h-100 w-100" />
-            </div>
+        <div className="h-100">
+            <img src={content} alt="" className="carousal-image" />
         </div>
     );
 }

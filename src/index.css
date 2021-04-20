@@ -32,7 +32,7 @@ body {
 
 .btn{
   background:white;
-  border-radius: 8px;
+  border-radius: 8px !important;
   border:none !important;
   outline: none !important;
   font-weight: 700 !important;
@@ -40,9 +40,15 @@ body {
 }
 
 .btn-primary{
-  color:white !important;
-  background:#3E3E70 !important;
+  color:#fff !important;
+  background:var(--nb_primary) !important;
 }
+
+.btn-secondary{
+  background:#3E3E70 !important;
+  color: #fff;
+}
+
 
 .btn-rounded{
   border:.1px solid #000 !important;
@@ -52,6 +58,6 @@ body {
 
 .btn-outline{
   background:white !important;
-  color:#3E3E70 !important;
-  border: 1px solid #979797 !important;
+  color:var(--nb_primary) !important;
+  border: 1px solid var(--nb_primary) !important;
 }

@@ -1,0 +1,45 @@
+.account-page{
+    height:100%;
+    overflow: scroll;
+}
+
+.right-panel{
+    height: 100%;
+    /* overflow: scroll; */
+}
+.left-panel{
+    height: calc(100vh - 60px) !important;
+    overflow: hidden;
+}
+.slide{
+    height: 100vh;
+}
+
+.carousal-image{
+    transform: scale(2.5);
+    width: 100%;
+}
+
+@media (min-width:1200px) {
+    .account-page{
+        overflow: hidden;
+    }
+    .right-panel{
+        height: calc(100vh - 60px) !important;
+        height: 100%;
+        overflow-y: scroll;
+    }   
+    .left-panel{
+        height: calc(100vh - 60px) !important;
+        overflow: hidden;
+    }
+    .carousal-image{
+        transform: scale(1.8);
+    }
+}
+
+@media (min-height:1300px) {
+    .carousal-image{
+        transform: scale(4.9);
+    }
+}
