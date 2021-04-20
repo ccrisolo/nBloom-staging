@@ -4,8 +4,7 @@
 }
 
 .right-panel{
-    height: 100%;
-    /* overflow: scroll; */
+    /* height: fit-content; */
 }
 .left-panel{
     height: calc(100vh - 60px) !important;
@@ -15,31 +14,48 @@
     height: 100vh;
 }
 
+.sign-up-btn{
+    position: relative;
+}
 .carousal-image{
-    transform: scale(2.5);
+    object-fit: cover !important;
     width: 100%;
+    height: 100%;
 }
 
-@media (min-width:1200px) {
+@media (min-width:1000px) {
+    /* .sign-up-btn{
+        position: absolute;
+    } */
     .account-page{
         overflow: hidden;
     }
     .right-panel{
-        height: calc(100vh - 60px) !important;
-        height: 100%;
+        max-height: calc(100vh - 60px) !important;
+        /* height: 100%; */
         overflow-y: scroll;
     }   
     .left-panel{
         height: calc(100vh - 60px) !important;
         overflow: hidden;
     }
-    .carousal-image{
-        transform: scale(1.8);
-    }
 }
 
-@media (min-height:1300px) {
-    .carousal-image{
-        transform: scale(4.9);
-    }
+.control-dots{
+    position: absolute !important;
+    /* bottom:1000px; */
+    left:0px;
+    bottom: 100px !important;
+    font-size: 100px;
+    /* background:red; */
+}
+.control-dots li{
+    height: 20px !important;
+    width: 20px !important;
+}
+.control-dots .dot{
+    background:#FDBA13 !important;
+}
+.control-dots .dot .selected{
+    /* background:  !important; */
 }

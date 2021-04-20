@@ -1,0 +1,16 @@
+import TextInput from "../TextInput";
+
+export default ({ onCancel }) => (
+    <div className="p-4" >
+        <div className="float-end mx-2 nb-text-primary">
+            <i class="fas fa-times cp" onClick={onCancel}></i>
+        </div>
+        <form>
+            <TextInput placeholder="Enter email" label="Forgot Password" />
+            <div className="d-flex justify-content-center my-2 mt-5">
+                <button type="submit" className="btn btn-primary px-5 mx-2">Send</button>
+                <button type="button" className="btn btn-outline px-5 mx-2" onClick={onCancel}>Cancel</button>
+            </div>
+        </form>
+    </div>
+    )

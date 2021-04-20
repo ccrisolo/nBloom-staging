@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
 :root{
-  --nb_primary: #FDBA13;
+  --nb_primary: #FB7750;
   --nb_primary__light:#FDDDC5;
   --nb_secondary: #6666FF;
 }
@@ -11,6 +11,8 @@ body {
   font-family:'Mulish', sans-serif !important;
   position: relative;
   overflow-x:hidden;
+  font-weight: 300;
+  font-size: 22px;
 }
 
 .nb-text-primary{
@@ -49,15 +51,24 @@ body {
   color: #fff;
 }
 
+.btn-light{
+  color:#000 !important;
+  background:#fff !important;
+}
+
 
 .btn-rounded{
-  border:.1px solid #000 !important;
-  border-radius: 50px !important;
-  
+  border-radius: 50px !important; 
 }
 
 .btn-outline{
   background:white !important;
   color:var(--nb_primary) !important;
   border: 1px solid var(--nb_primary) !important;
+}
+
+.btn-outline__dark{
+  background:white !important;
+  color:#000 !important;
+  border: 1px solid #000 !important;
 }
