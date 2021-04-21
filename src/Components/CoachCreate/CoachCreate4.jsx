@@ -77,7 +77,7 @@ function CoachCreate4() {
                                     bordered={true}
                                 />
                             </div>
-                            <div className="d-flex ">
+                            <div className="d-flex my-2">
                                 <div>
                                     <div className="my-2 d-lg-none">Expiry Date* : </div>
                                     <TextInput
@@ -102,9 +102,9 @@ function CoachCreate4() {
 
                 </div>
                 <div className="text-center my-2 mt-lg-5 py-lg-5">
-                    <button className="btn bgc-primary" onClick={() => navigate('/coach/create/step_4')}>
+                    <button className="btn bgc-primary" onClick={() => navigate('/coach/profile')}>
                         Save & Continue
-            </button>
+                    </button>
                 </div>
 
             </div>

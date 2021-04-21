@@ -14,6 +14,7 @@ import CoachCreate1 from "../Components/CoachCreate/CoachCreate1";
 import CoachCreate2 from "../Components/CoachCreate/CoachCreate2";
 import CoachCreate3 from "../Components/CoachCreate/CoachCreate3";
 import CoachCreate4 from "../Components/CoachCreate/CoachCreate4";
+import CoachProfile from "../Pages/CoachProfile";
 
 function MainLayout() {
     return (
@@ -28,6 +29,7 @@ function MainLayout() {
                     <Route path={`/step_3`} element={<CoachCreate3 />} />
                     <Route path={`/step_4`} element={<CoachCreate4 />} />
                 </Route>
+                <Route path="/coach/profile" element={<CoachProfile />} />
                 <Route path="/" exact element={<AccountPage />} >
                     <Route path={`/signup_1`} element={<Signup />} />
                     <Route path={`/signup_2`} element={<Singup1 />} />

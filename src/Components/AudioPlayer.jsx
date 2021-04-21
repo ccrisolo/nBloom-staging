@@ -1,11 +1,11 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
-function AudioPlayer({ maxTime, currentTime }) {
+function AudioPlayer({ maxTime, currentTime, style }) {
     const [togglePlay, setTogglePlay] = useState(false)
     return (
-        <div className="br-sm d-inline-block shadow py-2 mx-1 p-1" style={{width:'200px'}}>
+        <div className="br-sm d-inline-block shadow py-2 mx-1 p-1" style={style}>
             <div className="d-flex justify-content-between">
-                <div className="cp nb-text-primary mx-2" onClick={()=>setTogglePlay(!togglePlay)}>
+                <div className="cp nb-text-primary mx-2" onClick={() => setTogglePlay(!togglePlay)}>
                     {togglePlay ?
                         <i class="fas fa-pause"></i>
                         : <i class="fas fa-play"></i>}
