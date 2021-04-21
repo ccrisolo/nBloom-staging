@@ -14,7 +14,7 @@ const storeMain = (history) => {
       timeout: null,
       key: 'nBloom-dev',
       whitelist: [
-        "auth","ui"
+        "auth", "ui", 'account', 'coach'
       ],
       storage: storage,
     },

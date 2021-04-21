@@ -3,16 +3,16 @@ import NewsIcon from '../assets/news.svg'
 import MsgIcon from '../assets/message.svg'
 import UserIcon from '../assets/user.svg'
 
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Header({ context }) {
-    const h = useHistory();
+    const h = useNavigate();
     return (
         <div className="container-fluid px-0 shadow bg-white" style={{ minHeight: 60 }}>
             <div className="container-xl">
                 <div className="d-flex justify-content-between">
                     <div className="cp" style={{ width: '120px', height: '60px' }}>
-                        <img src={Logo} className="w-100 h-100" onClick={() => h.push('/')} />
+                        <img src={Logo} className="w-100 h-100" onClick={() => h('/')} />
                     </div>
                     {context === "dashboard" && <div className="w-50 my-auto d-none d-lg-inline-block">
                         <TextInputWithIcon placeholder="Search for a coach" />

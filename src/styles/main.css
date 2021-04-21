@@ -1,13 +1,159 @@
 
+.nb-title{
+    font-family: Muli;
+    font-weight: 300;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.nb-heading{
+    font-family: Muli;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #000;
+    line-height: 30px;
+}
+
+.nb-heading__sub{
+    font-family: Muli;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000; 
+}
+
+
 .nb-link{
-    font-size: 22px;
+    font-size: 12px;
     color: #3e3e70;
 }
 
 .nb-text{
     font-family: Muli;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 16px;
     text-align: left;
+    font-weight: light;
     color: #000;
+}
+ 
+.nb-text__sm{
+    font-family: Muli;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 300;
+    color: #000;
+}
+
+ 
+.nb-text__xs{
+    font-family: Muli;
+    font-size: 8px;
+    text-align: left;
+    font-weight: 300;
+    color: #000;
+}
+
+.nb-text__bold{
+    font-family: Muli;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    font-weight: light;
+    color: #000;
+}
+
+
+
+.nb-text__bold__sm{
+    font-family: Muli;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: left;
+    font-weight: light;
+    color: #000;
+}
+
+.nb_checkbox {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    left: -18px;
+  }
+  .nb_checkbox input {
+    display: none;
+    position: relative;
+  }
+  
+  .nb_checkbox__btn {
+    position: absolute;
+    top: 7px;
+    left: -30px;
+    height: 20px;
+    width: 19px;
+    background: #fff;
+    border: 2px solid  var(--nb_primary);
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+  .nb_checkbox input:focus ~ .nb_checkbox__btn {
+    display: block;
+  }
+  
+  .nb_checkbox input:checked ~ .nb_checkbox__btn::after {
+    display: block;
+  }
+  .nb_checkbox__btn::after {
+    content: '✓';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    /* line-height: 16px; */
+    color:  var(--nb_primary);;
+    border-radius: 2px;
+    /* background-color: var(--nb_primary); */
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+  }
+  /* checkbox customization end */
+
+@media (min-width:1000px) {
+    .nb-title{
+        font-size:  40px;
+    }
+    .nb-heading{
+        font-size: 32px !important;
+    }
+    .nb-heading_sub{
+        font-size: 30px !important;
+    }
+    .nb-link{
+        font-size: 24px;
+    }
+    .nb-text{
+        font-size: 24px !important;
+    }
+    .nb-text__sm{
+        font-size: 20px !important;
+    }
+    .nb-text__xs{
+        font-size: 16px !important;
+    }
+    .nb-text__bold{
+        font-size: 24px !important;
+    }
+    .nb-text__bold__sm{
+        font-size: 20px !important;
+    }
+    .btn{
+        font-size: 20px !important;
+        letter-spacing: 1.1px;
+        line-height: 30px !important;
+    }
 }

@@ -6,7 +6,7 @@ function HomePage() {
     return (
         <div className="w-100 position-relative">
             <BackgroundImage />
-            <Header context="dashboard" />
+            {/* <Header context="dashboard" /> */}
             <div className="container-fluid">
                 <div className="container-xl">
                     <Card />

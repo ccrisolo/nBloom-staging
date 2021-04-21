@@ -23,7 +23,6 @@ function TextInput(props) {
             width: "100%",
             borderRadius: "5px",
             outline: "none",
-            height: 37,
         },
         label: {
             fontSize: 18
@@ -37,14 +36,14 @@ function TextInput(props) {
                 </div>
                 <div className="shadow px-2" style={style.outline}>
                     <label htmlFor="email" className="w-100">
-                        <input style={style.input} {...props} />
+                        <textarea style={style.input} {...props} />
                     </label>
                 </div>
             </div>
             <div className="text-start d-lg-none">
                 <div className="shadow px-2" style={style.outline2}>
                     <label htmlFor="email" className="w-100">
-                        <input style={style.input} {...props} />
+                        <textarea style={style.input} {...props} />
                     </label>
                 </div>
             </div>

@@ -1,9 +1,10 @@
 .account-page{
     height:100%;
-    overflow: scroll;
+    /* overflow-y: scroll; */
 }
 
 .right-panel{
+    overflow-x: hidden;
     /* height: fit-content; */
 }
 .left-panel{
@@ -24,9 +25,10 @@
 }
 
 @media (min-width:1000px) {
-    /* .sign-up-btn{
-        position: absolute;
-    } */
+    .account-container{
+        width: 80%;
+        margin: auto;
+    }
     .account-page{
         overflow: hidden;
     }
@@ -39,19 +41,22 @@
         height: calc(100vh - 60px) !important;
         overflow: hidden;
     }
+    .sign-up-btn{
+        position: absolute;
+    }
 }
 
 .control-dots{
     position: absolute !important;
     /* bottom:1000px; */
     left:0px;
-    bottom: 100px !important;
+    bottom: 75px !important;
     font-size: 100px;
     /* background:red; */
 }
 .control-dots li{
-    height: 20px !important;
-    width: 20px !important;
+    height: 15px !important;
+    width: 15px !important;
 }
 .control-dots .dot{
     background:#FDBA13 !important;

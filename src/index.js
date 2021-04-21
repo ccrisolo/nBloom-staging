@@ -17,7 +17,7 @@ import history from "./history";
 export const store = configureStore(history);
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
+    {/* <ConnectedRouter history={history}> */}
       <ReduxToastr
         timeOut={4000}
         newestOnTop={false}
@@ -29,7 +29,7 @@ ReactDOM.render(
         closeOnToastrClick
       />
       <App />
-    </ConnectedRouter>
+    {/* </ConnectedRouter> */}
   </Provider>
   , document.getElementById('root')
 );

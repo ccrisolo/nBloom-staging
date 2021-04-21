@@ -7,7 +7,7 @@ function PasswordInput(props) {
             padding: 5,
             width: "100%",
             // border: "1px solid var(--nb_primary__light)",
-            border: "0px solid var(--nb_primary__light)",
+            border: props.bordered ? "2px solid var(--nb_primary__light)" : "0px solid var(--nb_primary__light)",
             borderRadius: "4px",
             overflow: 'hidden'
         },
@@ -15,10 +15,10 @@ function PasswordInput(props) {
             border: "none",
             width: "100%",
             outline: "none",
-            height: 40
+            height: 37
         },
         label: {
-            fontSize: 28
+            fontSize: 18
         }
     }
     return (
