@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="38" viewBox="0 0 56 38">
+  <text id="Label" transform="translate(0 24)" font-size="10" font-family="Muli-Bold, Muli" font-weight="700" letter-spacing="-0.024em"><tspan x="5.389" y="10">Messages</tspan></text>
+  <g id="Component_43_1" data-name="Component 43 – 1" transform="translate(16.5)">
+    <rect id="Rectangle_99" data-name="Rectangle 99" width="24" height="24" fill="#fff" opacity="0"/>
+    <path id="messenger" d="M10,0A10,10,0,0,0,1.326,14.978l-1.288,4a.781.781,0,0,0,.983.983l4-1.288A10,10,0,1,0,10,0Zm0,18.437a8.413,8.413,0,0,1-4.466-1.278.782.782,0,0,0-.654-.081l-2.888.93.93-2.888a.782.782,0,0,0-.081-.654A8.438,8.438,0,1,1,10,18.437ZM10.977,10A.977.977,0,1,1,10,9.023.977.977,0,0,1,10.977,10Zm3.906,0a.977.977,0,1,1-.977-.977A.977.977,0,0,1,14.883,10ZM7.07,10a.977.977,0,1,1-.977-.977A.977.977,0,0,1,7.07,10Zm0,0" transform="translate(2 2)"/>
+  </g>
+</svg>

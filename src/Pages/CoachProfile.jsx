@@ -2,6 +2,7 @@ import React from 'react'
 import BackgroundImage from '../Components/BackgroundImage'
 import CoachProfileCard from '../Components/CoachProfile/CoachProfileCard'
 import User from '../assets/userImage.svg'
+import BottomNavigation from '../Components/BottomNavigation'
 
 function CoachProfile() {
     return (
@@ -22,6 +23,7 @@ function CoachProfile() {
                     />
                 </div>
             </div>
+            <BottomNavigation />
         </div>
     )
 }

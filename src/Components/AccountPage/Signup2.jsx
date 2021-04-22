@@ -16,8 +16,8 @@ function Signup2() {
     const journeyType = useSelector(state => state.account.journeyType);
     console.dir(navigate)
     return (
-        <div className="container-fluid">
-            <div className="account-container">
+        <div className="">
+            <div className="">
             <div className="row justify-content-lg-between">
                     <div className="text-left col-12 col-lg-3 my-auto" style={{ color: '#6666FF', height: 35 }}>
                         <button
@@ -51,7 +51,7 @@ function Signup2() {
                     </div>
                     <div className="col-6 col-lg-12 my-3 text-center">
                         <button
-                            onClick={() => navigate('/coach')}
+                            onClick={() => navigate('/auth/coach')}
                             className="btn py-lg-2 w-75" style={{ background: '#EB90A2', textTransform: 'unset' }}>Be a coach</button>
                     </div>
                     <div className="col-6 col-lg-12 my-3 text-center">

@@ -33,10 +33,10 @@ function CoachProfileCard({
                 <div className="col-4 col-lg-2">
                     <img className="h-100 w-100" src={image} alt="Coach Profile" />
                 </div>
-                <div className="col">
+                <div className="col px-0">
                     <div className="row text-start ms-lg-2 w-100">
                         <div className="align-items-start">
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-lg-start justify-content-between p-0 m-0">
                                 <div className="nb-text__bold">{name}</div>
                                 <div className="d-none d-lg-block">
                                     <button
@@ -51,11 +51,11 @@ function CoachProfileCard({
                         </div>
                         <div className="align-items-center">
                             {
-                                profileDescription.map((pd, i) => <div key={i}>{pd}</div>)
+                                profileDescription.map((pd, i) => <div className="nb-text__sm" key={i}>{pd}</div>)
                             }
                         </div>
-                        <div className="align-items-end d-none d-lg-block">
-                            <AudioPlayer currentTime="3:12" maxTime="5:30" />
+                        <div className="align-items-end d-none d-lg-block mt-3">
+                            <AudioPlayer currentTime="3:12" maxTime="5:30" style={{ width: '25%', height: 40, fontSize: 18 }} />
                         </div>
                     </div>
                 </div>

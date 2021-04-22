@@ -35,7 +35,7 @@ function PasswordInput(props) {
                 <div className="my-2 " style={style.label}>
                     {props.label}
                 </div>
-                <div className="shadow d-flex justify-content-between px-2" style={style.outline2}>
+                <div className="shadow d-flex justify-content-between px-2" style={style.outline}>
                     <label htmlFor="email" className="w-100">
                         <input style={style.input} {...props} type={showPassword ? "text" : "password"} />
                     </label>
@@ -47,7 +47,7 @@ function PasswordInput(props) {
                 </div>
             </div>
             <div className="text-start d-lg-none">
-                <div className="shadow d-flex justify-content-between px-2" style={style.outline}>
+                <div className="shadow d-flex justify-content-between px-2" style={style.outline2}>
                     <label htmlFor="email" className="w-100">
                         <input style={style.input} {...props} type={showPassword ? "text" : "password"} />
                     </label>

@@ -6,7 +6,7 @@ function CoachCreate() {
         <div className="container-fluid">
             <div className="container-xl my-2">
                 <div className="row justify-content-center my-auto">
-                    <div className="col-lg-7 col-xl-6 shadow br p-2 px-3">
+                    <div className="col-lg-7 col-xl-6 shadow-lg br px-lg-3 p-lg-2">
                         <Outlet />
                     </div>
                 </div>

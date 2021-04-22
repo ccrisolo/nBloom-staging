@@ -2,7 +2,7 @@ import React from 'react'
 
 function NbCheckbox({ label, onCheck, checked, className, name, id }) {
     return (
-        <label className="nb_checkbox my-2 mx-5 nb-text__xs fs-6" id={`${id}__label`} style={{lineHeight:2}}>
+        <label className="nb_checkbox my-2 mx-5 nb-text__sm" id={`${id}__label`} style={{lineHeight:2}}>
             <input
                 type="checkbox"
                 name={name}

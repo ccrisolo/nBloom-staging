@@ -134,7 +134,7 @@
         font-size: 32px !important;
     }
     .nb-heading_sub{
-        font-size: 30px !important;
+        font-size: 28px !important;
     }
     .nb-link{
         font-size: 24px;
@@ -143,16 +143,19 @@
         font-size: 24px !important;
     }
     .nb-text__sm{
-        font-size: 20px !important;
+        font-size: 16px !important;
     }
     .nb-text__xs{
-        font-size: 16px !important;
+        font-size: 12px !important;
     }
     .nb-text__bold{
         font-size: 24px !important;
     }
     .nb-text__bold__sm{
-        font-size: 20px !important;
+        font-size: 16px !important;
+    }
+    .nb-text__bold__sm{
+        font-size: 12px !important;
     }
     .btn{
         font-size: 20px !important;

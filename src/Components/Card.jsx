@@ -1,4 +1,4 @@
-import ShareIcon from '../assets/share.svg'
+import ShareIcon from '../assets/forward.svg'
 import UserImage from '../assets/userImage.svg'
 import AudioPlayer from './AudioPlayer'
 

@@ -21,14 +21,25 @@ function AccountPage({ match }) {
                 <div className="col-12 col-lg-6 position-relative p-0 left-panel d-none d-lg-inline-block">
                     <CarousalContent />
                 </div>
-                <div className="col-12 col-lg-6 right-panel position-relative">
-                    <Outlet />
+                <div className="col-12 col-lg-6 right-panel position-relative d-none d-lg-inline-block">
+                    <div className="container-fluid px-1 px-lg-5">
+                        <div className="container-xl">
+                            <div className="account-container">
+                                <Outlet />
+                            </div>
+                        </div>
+                    </div>
                     {/* <div className="container-fluid">
                         {accountPageContext === "login" && <Login />}
                         {accountPageContext === "signup" && <Signup />}
                         {accountPageContext === "signup1" && <Singup1 />}
                         {accountPageContext === "signup2" && <Signup2 />}
                     </div> */}
+                </div>
+            </div>
+            <div className="container-fluid px-1 px-lg-5 d-lg-none">
+                <div className="container-xl">
+                    <Outlet />
                 </div>
             </div>
         </div >
