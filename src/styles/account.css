@@ -17,17 +17,68 @@
 
 .sign-up-btn{
     position: relative;
+    font-size:14px !important ;
+    margin-top: 30px !important;
+    font-weight: bold !important;
 }
 .carousal-image{
     object-fit: cover !important;
     width: 100%;
     height: 100%;
 }
+.ap-title{
+    font-weight: bold !important;
+    font-size: 28px !important;
+}
+.ap-heading{
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+.ap-desc{
+    font-weight: normal !important;
+    font-size: 17px !important;
+}
+.ap-desc__bold{
+    font-weight: bold !important;
+    font-size: 17px !important;
+}
+.step-text{
+    font-size: 13px !important;
+    font-weight: lighter;
+}
+
+.ap-label{
+    font-size:16px !important;
+}
+
+@media (min-width:1600px) {
+    .sign-up-btn{
+        position: absolute;
+    }
+}
 
 @media (min-width:1000px) {
     .account-container{
         width: 80%;
         margin: auto;
+    }
+    .ap-title{
+        font-weight: bold !important;
+        font-size: 38px !important;
+    }
+    .ap-desc{
+        font-weight: 600 !important;
+        font-size: 28px !important;
+    }
+    .ap-desc__bold{
+        font-size: 22px !important;
+    }
+    .step-text{
+        font-size: 17px !important;
+    }
+    
+    .ap-label{
+        font-size:22px !important;
     }
     .account-page{
         overflow: hidden;
@@ -42,7 +93,8 @@
         overflow: hidden;
     }
     .sign-up-btn{
-        position: absolute;
+        font-size: 22px !important;
+        font-weight: 300 !important;
     }
 }
 
@@ -57,10 +109,11 @@
 .control-dots li{
     height: 15px !important;
     width: 15px !important;
+    background: #fff !important;
 }
 .control-dots .dot{
-    background:#FDBA13 !important;
+    background:#FFF !important;
 }
-.control-dots .dot .selected{
-    /* background:  !important; */
+.dot.selected{
+    background:#FDBA13 !important;
 }

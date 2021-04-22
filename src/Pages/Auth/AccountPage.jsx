@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Switch, Route, useHistory, Outlet } from "react-router-dom";
 
-import Header from '../../Components/Header'
-
 import '../../styles/account.css'
 
 import Login from '../../Components/AccountPage/Login';

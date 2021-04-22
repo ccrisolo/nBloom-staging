@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import { parseUrl } from 'query-string'
 
 import Logo from '../assets/logo.svg'
@@ -8,20 +9,10 @@ import MsgIcon from '../assets/message.svg'
 import UserIcon from '../assets/user.svg'
 
 
-function Header({ }) {
-    const h = useNavigate();
-    const [context, setContext] = useState('');
-
-    useEffect(() => {
-        const path = window.location.pathname;
-        if (path === "/")
-            setContext('home')
-        else if (path === '/auth')
-            setContext('auth')
-        console.log(context, 'conte---------')
-    })
+function Header({ context }) {
+    const h = useNavigate()
     return (
-        <div className="container-fluid px-0 shadow bg-light" style={{ minHeight: 60, position: 'fixed', zIndex: 9999 }}>
+        <div className="container-fluid px-0 shadow bg-light" style={{ height: 60, position: 'fixed', zIndex: 1 }}>
             <div className="container-xl">
                 <div className="d-flex justify-content-between">
                     <div className="cp" style={{ width: '120px', height: '60px' }}>
@@ -33,7 +24,13 @@ function Header({ }) {
                     {context === "home" && <div className="my-auto d-none d-lg-inline-block">
                         <img className="mx-2 cp" src={NewsIcon} alt="" />
                         <img className="mx-2 cp" src={MsgIcon} alt="" />
-                        <img className="mx-2 cp" src={UserIcon} alt="User Icon" onClick={() => h('/auth')} />
+                        <img
+                            className="mx-2 cp" src={UserIcon} alt="User Icon"
+                            onClick={() => {
+                                // if (window.innerWidth < 1000)
+                                //     dispatch(toggleNavbar(false))
+                                h('/auth')
+                            }} />
                     </div>}
                 </div>
             </div>

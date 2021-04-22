@@ -31,7 +31,7 @@ function TextInput(props) {
     return (
         <div>
             <div className="d-none d-lg-block">
-                <div className="my-2" style={style.label}>
+                <div className="my-2 ap_label" style={style.label}>
                     {props.label}
                 </div>
                 <div className="shadow px-2" style={style.outline}>

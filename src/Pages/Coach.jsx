@@ -8,7 +8,7 @@ function CoachProfile(p) {
     const [notYet, setNotYet] = useState(false)
     return (
         <div className="container-fluid">
-            <div className="container-xl px-0 text-center">
+            <div className="container-xl text-center">
                 <div className="d-flex justify-content-between">
                     <button
                         style={{ color: '#6666FF' }}

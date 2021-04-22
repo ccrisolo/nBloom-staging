@@ -4,52 +4,42 @@ import TextInput from '../TextInput'
 import PasswordInput from '../PasswordInput'
 
 import Card from '../../assets/card.svg'
+import MobileBackButton from '../MobileBackButton'
 
 function CoachCreate4() {
     const [showCard, setShowCard] = useState(false)
     const navigate = useNavigate()
     return (
         <div>
-            <div className="d-flex justify-content-between my-2">
-                <div className="text-left" style={{ color: '#6666FF', height: 35 }}>
-                    <button
-                        style={{ color: '#6666FF' }}
-                        className="btn btn-rounded shadow px-3 h-100 py-auto d-none d-lg-block"
-                        onClick={() => navigate(-1)}
-                    >
-                        Back
-                    </button>
-                    <div
-                        style={{ color: '#6666FF', fontSize: 17 }}
-                        className="d-lg-none my-2"
-                        onClick={() => navigate(-1)}
-                    >
-                        <i className="fa fa-chevron-left"></i> Back
+            <div className="d-lg-none mt-3">
+                <MobileBackButton onClick={() => navigate(-1)} />
+                <div className="ap-heading my-2 my-lg-5">
+                    Create Profile
                 </div>
-                </div>
-                <div className="nb-text__sm">
+                <div className="step-text mt-3">
                     Section 4 of 4
+                </div>
             </div>
-            </div>
-            <div className="nb-text__bold my-5">
+            <div className="ap-desc__bold my-1 mb-4     my-lg-5">
                 Start Booking Clients
-        </div>
+            </div>
             <div>
                 <div className="col-12 col-xl-11 col-lg-10">
                     <div>
-                        <div className="my-2 d-lg-none">Add Calendar For Consults: </div>
+                        <div className="my-2 d-lg-none ap-desc__bold">Add Calendar For Consults: </div>
                         <TextInput
                             label="Add Calendar For Consults: "
                             placeholder="My calendly link"
+                            value="asd"
                             type="date"
                             bordered={true}
                         />
                     </div>
-                    <div className="my-lg-5 my-2">
-                        <div className="my-2">Ready To Set Up Your Payment Info?</div>
+                    <div className="my-lg-5 my-3">
+                        <div className="my-2 ap-desc__bold">Ready To Set Up Your Payment Info?</div>
                         <div
                             onClick={() => setShowCard(!showCard)}
-                            className="cp d-flex justify-content-between w-100 px-2 py-2 br my-2 nb-text__xs" style={{ border: '2px solid var(--nb_primary__light)' }}>
+                            className="cp d-flex justify-content-between w-100 px-2 py-2 br my-2 nb-text__sm shadow-lg " style={{ border: '2px solid var(--nb_primary__light)' }}>
                             <div className="my-auto">
                                 Add Payment Info to Start Booking
                             </div>

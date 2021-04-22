@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 import { Route, Routes, useNavigate, BrowserRouter } from "react-router-dom";
 import Login from "../Components/AccountPage/Login";
 import Signup from "../Components/AccountPage/Signup";
@@ -16,12 +18,35 @@ import CoachCreate3 from "../Components/CoachCreate/CoachCreate3";
 import CoachCreate4 from "../Components/CoachCreate/CoachCreate4";
 import CoachProfile from "../Pages/CoachProfile";
 import Consult from "../Pages/Consult";
+import { toggleNavbar } from '../store/actions/UI'
 
 function MainLayout() {
+    const showNavBar = useSelector(state => state.ui.showNavBar)
+    const dispatch = useDispatch()
+    const [context, setContext] = useState('');
+
+    useEffect(() => {
+        const path = window.location.pathname;
+        if (path === "/")
+            setContext('home')
+        else if (path === '/auth')
+            setContext('auth')
+        else
+            setContext('auth')
+        console.log(context, 'conte---------')
+        if (context === "auth" && window.innerWidth < 1000)
+            dispatch(toggleNavbar(false))
+        else dispatch(toggleNavbar(true))
+
+    })
     return (
         <BrowserRouter history={history}>
-            <Header />
-            <div style={{height:60}}/>
+            {showNavBar &&
+                <div>
+                    <Header context={context} />
+                    <div style={{ height: 60 }} />
+                </div>
+            }
             <Routes >
                 <Route path="/dashboard" element={<HomePage />} />
                 <Route path="/consult" element={<Consult />} />

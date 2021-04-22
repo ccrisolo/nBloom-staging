@@ -13,6 +13,7 @@ import ForgotPassword from './ForgotPassword';
 import Modal from '../Modal';
 import NbCheckbox from '../NbCheckbox';
 import OutlineButtonIcon from '../OutlineButtonIcon';
+import MobileBackButton from '../MobileBackButton';
 
 
 function Login() {
@@ -21,12 +22,15 @@ function Login() {
     const dispatch = useDispatch()
     const accountPageContext = useSelector(state => state.ui.accountPageContext);
 
-    const handleLogin=(e)=>{
+    const handleLogin = (e) => {
         e.preventDefault()
         navigate('/consult')
     }
     return (
         <div className="">
+            <div className="d-lg-none mt-3">
+                <MobileBackButton onClick={() => navigate(-1)} />
+            </div>
             <Modal
                 onClose={() => setShowForgotPassword(false)}
                 show={showForgotPassword}
@@ -35,25 +39,21 @@ function Login() {
                 } />
 
             <div className="">
-                <div
-                    style={{ color: '#6666FF', fontSize: 17 }}
-                    className="d-lg-none my-2"
-                    onClick={() => navigate(-1)}
-                >
-                    <i className="fa fa-chevron-left"></i> Back
-                </div>
-                <div className="text-lg-center nb-heading my-3">
+                <div className="text-lg-center ap-title my-3 d-none d-lg-inline-block">
                     Login
                 </div>
-                <div className="my-3 text-lg-center">
-                    <div className="nb-heading__sub">
+                <div className="text-lg-center ap-title my-3 d-lg-none">
+                    Sign In
+                </div>
+                <div className="my-3 text-lg-center ap-desc">
+                    <div className="">
                         Hello again!
                     </div>
-                    <div className="nb-heading__sub">
+                    <div className="ap-desc">
                         sign in with your username & password
                     </div>
                 </div>
-                <form onSubmit={(e) => handleLogin(e)}>
+                <form onSubmit={(e) => handleLogin(e)} className="my-5 my-lg-0">
                     <div className="my-3">
                         <TextInput label="Email" placeholder="Enter your email" />
                     </div>
@@ -68,8 +68,8 @@ function Login() {
                         />
                         <div className="nb-text__sm cp my-auto" onClick={() => setShowForgotPassword(true)}>Forgot password ?</div>
                     </div>
-                    <div className="text-center w-100">
-                        <button className="btn btn-secondary w-75 my-3 br py-2" type="submit">Next </button>
+                    <div className="text-center w-100 my-3 my-lg-0">
+                        <button className="btn btn-secondary w-100 w-lg-75 my-3 br py-2" type="submit">Next </button>
                     </div>
                 </form>
                 <div className="position-relative my-2 d-none d-lg-block" style={{ border: ".1px solid rgba(0,0,0,0.2)" }}>
@@ -81,11 +81,11 @@ function Login() {
                 <div className="row my-2 justify-content-center">
                     <div className="col-lg-12 col-3">
                         <OutlineButtonIcon
-                            className="my-2 mx-auto px-3 nb-text__bold__sm"
+                            className="my-2 mx-auto px-3"
                             borderRadius="50px"
-                            outlineColor="#000"
+                            outlineColor="#707070"
                             outlineWidth="1px"
-                            Icon={<img src={GoogleIcom} alt="" style={{ width: 20, height: 25 }} className="mx-2" />}
+                            Icon={<img src={GoogleIcom} alt="" style={{ width: 30, height: 30 }} className="mx-2" />}
                             label="Continue with google"
                         />
                     </div>
@@ -93,17 +93,17 @@ function Login() {
                     <div className="col-lg-12 col-3">
                         <OutlineButtonIcon
                             outlineWidth="1px"
-                            className="my-2 mx-auto nb-text__bold__sm px-2"
+                            className="my-2 mx-auto px-3"
                             borderRadius="50px"
-                            outlineColor="#000"
-                            Icon={<img src={LinkedInIcon} alt="" style={{ width: 20, height: 25 }} className="mx-2" />}
+                            outlineColor="#707070"
+                            Icon={<img src={LinkedInIcon} alt="" style={{ width: 30, height: 30 }} className="mx-2" />}
                             label="Continue with LinkedIn"
                         />
                     </div>
                 </div>
                 <div className="sign-up-btn text-center w-100 my-2 mt-lg-0 pt-5 pt-lg-0" style={{ bottom: 10, left: 0 }}>
                     New to 'nBloom? {" "}
-                    <span className="nb-link cp" onClick={() => navigate('/auth/signup_1')}>
+                    <span className="cp" onClick={() => navigate('/auth/signup_1')} style={{ color: '#3E3E70' }}>
                         Sign up here
                     </span>
                 </div>

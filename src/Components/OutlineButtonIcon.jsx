@@ -5,7 +5,9 @@ function OutlineButtonIcon({ onClick, Icon, label, borderRadius, outlineColor, o
         outline: {
             borderRadius: borderRadius,
             border: `${outlineWidth} solid ${outlineColor}`,
-            width: 'fit-content'
+            width: 330,
+            fontSize: 22,
+            height:55
         },
         outline2: {
             borderRadius: borderRadius,
@@ -16,12 +18,12 @@ function OutlineButtonIcon({ onClick, Icon, label, borderRadius, outlineColor, o
     return (
         <div>
             <div
-                className={`cp d-lg-flex d-none justify-content-between p-1 ${className}`}
+                className={`cp d-lg-flex d-none justify-content-evenly p-1 ${className}`}
                 style={{ ...style, ..._style.outline }}
                 onClick={onClick}
             >
-                <div>{Icon}</div>
-                <div className="d-none d-lg-inline-block">{label}</div>
+                <div className="my-auto">{Icon}</div>
+                <div className="d-none d-lg-inline-block my-auto">{label}</div>
             </div>
             <div
                 className={`cp d-flex d-lg-none justify-content-between p-1 ${className}`}
@@ -29,7 +31,6 @@ function OutlineButtonIcon({ onClick, Icon, label, borderRadius, outlineColor, o
                 onClick={onClick}
             >
                 <div>{Icon}</div>
-                <div className="d-none d-lg-inline-block">{label}</div>
             </div>
         </div>
     )

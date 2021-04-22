@@ -5,26 +5,28 @@ import ToggleButton from 'react-toggle-button'
 import TextInput from '../TextInput'
 import NbSelect from '../NbSelect'
 import NbCheckbox from '../NbCheckbox'
+import MobileBackButton from '../MobileBackButton'
 
 function CoachCreate1() {
     const navigate = useNavigate()
     const [takingClients, setTakingClients] = useState(false)
     return (
         <div>
-            <div className="d-flex justify-content-between">
-                <div className="nb-heading">
+            <div className="row justify-content-between">
+                <MobileBackButton />
+                <div className="col-12 col-lg-8 ap-heading">
                     Create a coach profile
                 </div>
-                <div className="nb-text__sm">
+                <div className="col-12 col-lg-4 step-text text-lg-end mt-4 my-lg-0">
                     Section 1 of 4
                 </div>
             </div>
-            <div className="nb-">
-                Tell Us About Your Self
-            </div>
             <div>
-                <div className="col-12 col-xl-11 col-lg-10">
-                    <div className="position-relative my-5">
+                <div className="col-12 col-xl-9 col-lg-8 col-xxl-10">
+                    <div className="ap-desc__bold my-lg-4">
+                        Tell Us About Your Self
+                    </div>
+                    <div className="position-relative my-3 my-lg-4">
                         <div
                             className="bg-secondary text-center position-relative w"
                             style={{
@@ -46,7 +48,7 @@ function CoachCreate1() {
                     </div>
                     </div>
                     <div className="my-1">
-                        <div className="my-2 d-lg-none">Name :</div>
+                        <div className="my-2 d-lg-none ap-label">Name :</div>
                         <TextInput
                             bordered={true}
                             label="Name :"
@@ -55,7 +57,7 @@ function CoachCreate1() {
                         />
                     </div>
                     <div className="my-1">
-                        <div className="my-2 d-lg-none">Coach Type :</div>
+                        <div className="my-2 d-lg-none ap-label">Coach Type :</div>
                         <NbSelect
                             bordered={true}
                             label="Coach Type :"
@@ -65,7 +67,7 @@ function CoachCreate1() {
                         />
                     </div>
                     <div className="my-1">
-                        <div className="my-2 d-lg-none">My rates are :</div>
+                        <div className="my-2 d-lg-none ap-label">My rates are :</div>
                         <TextInput
                             bordered={true}
                             label="My rates are :"
@@ -74,10 +76,10 @@ function CoachCreate1() {
                         />
                     </div>
                     <div className="my-3 d-flex justify-content-between">
-                        <div className="">
+                        <div className="ap-label">
                             Taking Clients ?
-                    </div>
-                        <div className=" me-3">
+                        </div>
+                        <div className="me-3 d-none d-lg-block">
                             <ToggleButton
                                 colors={{
                                     active: {
@@ -90,13 +92,32 @@ function CoachCreate1() {
                                 trackStyle={{ height: 30, width: 80, color: '#f00', padding: '0 4px' }}
                                 thumbStyle={{ margin: '0 4px' }}
                                 value={takingClients}
-                                onToggle={(value) => setTakingClients(!takingClients)} />
+                                onToggle={(value) => setTakingClients(!takingClients)}
+                            />
+                        </div>
+                        <div className="d-lg-none">
+                            <ToggleButton
+                                colors={{
+                                    active: {
+                                        base: 'green',
+                                    },
+                                    inactive: {
+                                        base: '#FDBA13',
+                                    }
+                                }}
+                                activeLabel=""
+                                inactiveLabel=""
+                                // trackStyle={{ height: 10, width: 20, color: '#f00',margin:-20}}
+                                // thumbStyle={{  height: 10, width: 10, margin:-20}}
+                                value={takingClients}
+                                onToggle={(value) => setTakingClients(!takingClients)}
+                            />
                         </div>
                     </div>
-                    <div className="my-2">
-                        <div>
+                    <div className="my-4 my-lg-2">
+                        <div className="ap-label">
                             I can verify that I have these certification(s)
-                    </div>
+                        </div>
                         <NbCheckbox
                             className="nb-text__sm"
                             label="Executive Coach Certification"

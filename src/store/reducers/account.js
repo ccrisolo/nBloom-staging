@@ -2,6 +2,7 @@ import * as acc from "../actions/account";
 const initialState = {
     email: '',
     password: '',
+    cPassword: '',
     dob: '',
     name: '',
     work: '',

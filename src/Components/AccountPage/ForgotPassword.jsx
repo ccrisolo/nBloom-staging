@@ -1,7 +1,7 @@
 import TextInput from "../TextInput";
 
 export default ({ onCancel }) => (
-    <div className="p-4" >
+    <div className="p-4" style={{zIndex:99999}}>
         <div className="float-end mx-2 nb-text-primary">
             <i class="fas fa-times cp" onClick={onCancel}></i>
         </div>

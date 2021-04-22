@@ -95,7 +95,7 @@
     height: 20px;
     width: 19px;
     background: #fff;
-    border: 2px solid  var(--nb_primary);
+    border: 2px solid  #3E3E70;
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
   }
@@ -108,14 +108,15 @@
   }
   .nb_checkbox__btn::after {
     content: '✓';
-    font-size: 16px;
+    font-size: 14px;
+    padding: 30px;
     font-weight: bold;
     position: absolute;
     display: none;
     left: 50%;
     top: 50%;
-    /* line-height: 16px; */
-    color:  var(--nb_primary);;
+    /* line-height: 44px; */
+    color: #3E3E70;
     border-radius: 2px;
     /* background-color: var(--nb_primary); */
     transform: translate(-50%, -50%);
@@ -123,7 +124,20 @@
   }
   /* checkbox customization end */
 
+  .w-25{
+      width: 25% !important;
+  }
+
 @media (min-width:1000px) {
+    .w-lg-25{
+        width: 25% !important;
+    }
+    .w-lg-50{
+        width: 50% !important;
+    }
+    .w-lg-75{
+        width: 75% !important;
+    }
     .shadow-lg{
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
     }
@@ -157,9 +171,9 @@
     .nb-text__bold__sm{
         font-size: 12px !important;
     }
-    .btn{
+    /* .btn{
         font-size: 20px !important;
         letter-spacing: 1.1px;
         line-height: 30px !important;
-    }
+    } */
 }

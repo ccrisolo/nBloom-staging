@@ -37,12 +37,26 @@ body {
 input::placeholder {
   color: #000;
   font-family: "Mulish" !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   font-weight: 300 !important;
   /* line-height: 32px !important; */
 }
 
 input::-moz-placeholder {
+  color: #888888;
+  font-family: "Mulish" !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  line-height: 20px !important;
+}
+textarea::placeholder {
+  color: #000;
+  font-family: "Mulish" !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  /* line-height: 32px !important; */
+}
+textarea::-moz-placeholder {
   color: #888888;
   font-family: "Mulish" !important;
   font-size: 14px !important;
@@ -95,7 +109,7 @@ input{
   outline: none !important;
   font-weight: 700 !important;
   height: 50px;
-  font-size: 17px !important;
+  font-size: 16px !important;
   line-height: 20px !important;
 }
 

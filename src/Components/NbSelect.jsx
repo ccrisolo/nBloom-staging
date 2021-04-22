@@ -10,7 +10,7 @@ function NbSelect({
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     return (
         <div className="my-lg-4">
-            <div className="my-2 d-none d-lg-block" style={{ fontSize: 18 }}>
+            <div className="my-2 d-none d-lg-block ap_label">
                 {label}
             </div>
             {/* for desktop */}
@@ -35,7 +35,7 @@ function NbSelect({
                         <span
                             id="selected-item"
                             className="my-auto"
-                            style={{ color: selectedItem ? "#000" : "grey" ,fontSize:14}}
+                            style={{ color: selectedItem ? "#000" : "grey" ,fontSize:16}}
                         >
                             {selectedItem || placeholder}
                         </span>{" "}
