@@ -69,7 +69,8 @@ function Login() {
                         <div className="nb-text__sm cp my-auto" onClick={() => setShowForgotPassword(true)}>Forgot password ?</div>
                     </div>
                     <div className="text-center w-100 my-3 my-lg-3">
-                        <button className="btn btn-secondary w-100 w-lg-75 my-3 br py-2" type="submit">Next </button>
+                        <button className="d-none d-lg-inline-block btn btn-secondary w-100 w-lg-75 my-3 br py-2" type="submit" style={{width:481,height:74}}>Next </button>
+                        <button className="d-lg-none btn btn-secondary w-100 my-3 br py-2" type="submit">Next </button>
                     </div>
                 </form>
                 <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{}}>
