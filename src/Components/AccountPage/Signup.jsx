@@ -68,11 +68,11 @@ const Signup = () => {
                     onInput={(e) => dispatch(updateUserCred({ cPassword: e.target.value }))} />
             </div>
             <div className="my-2 text-center">
-                <button className="btn btn-secondary w-100 w-lg-75 my-3 br-lg py-2" onClick={() => {
+                <button className="btn btn-secondary w-100 w-lg-75 my-4 mt-lg-5 br-lg py-2" onClick={() => {
                     navigate('/auth/signup_2')
                 }}> Next</button>
             </div>
-            <div className="position-relative my-2 my-lg-3 my-xl-3 my-xxl-4 d-none d-lg-block" style={{ border: ".1px solid #707070" }}>
+            <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{ border: ".1px solid #707070" }}>
                 <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-13px" }}>OR</span>
             </div>
             <div className="nb-text__sm d-lg-none text-center">
@@ -82,10 +82,10 @@ const Signup = () => {
                 <div className="col-lg-12 col-3">
                     <OutlineButtonIcon
                         onClick={() => window.open("https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin")}
-                        className="my-2 mx-auto px-3"
+                        className="my-2 mx-auto px-0 pe-4 ps-2"
                         borderRadius="50px"
                         outlineColor="#D3D3D3"
-                        outlineWidth="2px"
+                        outlineWidth="1px"
                         Icon={<img src={GoogleIcom} alt="" style={{ width: 30, height: 30 }} className="mx-2" />}
                         label="Continue with google"
                     />
@@ -94,7 +94,7 @@ const Signup = () => {
                 <div className="col-lg-12 col-3 ">
                     <OutlineButtonIcon
                         onClick={() => window.open("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin")}
-                        outlineWidth="2px"
+                        outlineWidth="1px"
                         className="my-2 mx-auto px-3"
                         borderRadius="50px"
                         outlineColor="#D3D3D3"
