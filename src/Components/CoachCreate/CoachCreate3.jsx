@@ -19,7 +19,10 @@ import MobileBackButton from '../MobileBackButton'
 
 function CoachCreate3() {
     const navigate = useNavigate()
-    const [currentIcon, setCurrentIcon] = useState('insta')
+    const [currentIcon, setCurrentIcon] = useState('Instagram')
+    const [youtubeLink, setYoutubeLink] = useState("")
+    const [instaLint, setInstaLint] = useState("")
+    const [linkedInLink, setLinkedInLink] = useState("")
     return (
         <div>
             <div className="d-lg-none mt-3">
@@ -78,14 +81,14 @@ function CoachCreate3() {
 
             <div className="d-lg-none">
                 <div className="my-3 position-relative">
-                    <img onClick={() => setCurrentIcon('insta')} className="mx-3" src={Insta_S} alt="" style={{ height: 50, width: 50 }} />
-                    <img onClick={() => setCurrentIcon('linkedin')} className="mx-3" src={LinkedIn_S} alt="" style={{ height: 50, width: 50 }} />
-                    <img onClick={() => setCurrentIcon('youtube')} className="mx-3" src={YouTUbe_S} alt="" style={{ height: 50, width: 50 }} />
+                    <img onClick={() => setCurrentIcon('Instagram')} className="mx-3" src={Insta_S} alt="" style={{ height: 50, width: 50 }} />
+                    <img onClick={() => setCurrentIcon('Linkedin')} className="mx-3" src={LinkedIn_S} alt="" style={{ height: 50, width: 50 }} />
+                    <img onClick={() => setCurrentIcon('Youtube')} className="mx-3" src={YouTUbe_S} alt="" style={{ height: 50, width: 50 }} />
                     <div
                         className="position-absolute"
                         style={{
                             bottom: -12,
-                            left: currentIcon === "youtube" ? 200 : currentIcon === "linkedin" ? 115 : 35,
+                            left: currentIcon === "Youtube" ? 200 : currentIcon === "Linkedin" ? 115 : 35,
                             width: 10, height: 10, background: '#FDBA13', borderRadius: 50
                         }} />
                 </div>
@@ -93,8 +96,8 @@ function CoachCreate3() {
                     <div className="shadow p-2 px-3" style={{ fontSize: 13 }}>
                         <img
                             src={
-                                currentIcon === "linkedin" ? LinkedIn
-                                    : currentIcon === "insta" ? Insta : YouTUbe
+                                currentIcon === "Linkedin" ? LinkedIn
+                                    : currentIcon === "Insta" ? Insta : YouTUbe
                             }
                             style={{ width: 28, height: 28 }}
                         />
@@ -102,6 +105,10 @@ function CoachCreate3() {
                     </div>
                     <div className="p-2 px-3">
                         <TextInput__
+                            value={currentIcon === "Linkedin" ? linkedInLink
+                                : currentIcon === "Instagram" ? instaLint : youtubeLink}
+                            onInput={(e) => currentIcon === "Linkedin" ? setLinkedInLink(e.target.value)
+                                : currentIcon === "Instagram" ? setInstaLint(e.target.value) : setYoutubeLink(e.target.value)}
                             placeholder={`Your ${currentIcon} url`}
                         />
                     </div>

@@ -51,10 +51,10 @@ function Signup2() {
                     <div className="col-6 col-lg-12 my-3 text-center">
                         <button
                             onClick={() => navigate('/coach')}
-                            className="btn py-lg-2 w-75" style={{ background: '#EB90A2', textTransform: 'unset' }}>Be a coach</button>
+                            className="btn py-lg-2 w-75" style={{ background: '#EB90A2', fontWeight:'light'  }}>Be a coach</button>
                     </div>
                     <div className="col-6 col-lg-12 my-3 text-center">
-                        <button className="btn py-lg-2  w-75" style={{ background: '#C5ADEE', textTransform: 'unset' }}>Get a coach</button>
+                        <button className="btn py-lg-2  w-75" style={{ background: '#C5ADEE', fontWeight:100 }}>Get a coach</button>
                     </div>
                 </div>
             </div>

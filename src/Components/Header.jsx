@@ -18,10 +18,10 @@ function Header({ context }) {
                     <div className="cp" style={{ width: '120px', height: '60px' }}>
                         <img src={Logo} className="w-100 h-100" onClick={() => h('/')} />
                     </div>
-                    {context === "home" && <div className="w-50 my-auto d-none d-lg-inline-block">
+                    {<div className="w-50 my-auto d-none d-lg-inline-block">
                         <TextInputWithIcon placeholder="Search for a coach" />
                     </div>}
-                    {context === "home" && <div className="my-auto d-none d-lg-inline-block">
+                    {<div className="my-auto d-none d-lg-inline-block">
                         <img className="mx-2 cp" src={NewsIcon} alt="" />
                         <img className="mx-2 cp" src={MsgIcon} alt="" />
                         <img
@@ -44,11 +44,10 @@ export default Header
 const TextInputWithIcon = (props) => {
     const style = {
         outline: {
-            padding: 5,
+            // padding: 5,
             width: "100%",
             border: "1px solid var(--nb_primary__light)",
             borderRadius: "8px",
-            height: 45,
         },
         input: {
             border: "none",
@@ -56,6 +55,8 @@ const TextInputWithIcon = (props) => {
             height: "100%",
             margin: "0px 5px",
             outline: "none",
+            background:'transparent',
+            height: 45,
         },
         icon: {
             width: '10%',
@@ -64,7 +65,7 @@ const TextInputWithIcon = (props) => {
     }
     return (
         <form>
-            <div style={style.outline}>
+            <div className="px-1" style={style.outline}>
                 <span className="text-center mx-2" style={style.icon}>{
                     <i class="fas fa-search"></i>
                 }</span>

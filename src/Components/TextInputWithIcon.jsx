@@ -23,6 +23,7 @@ function TextInputWithIcon(props) {
             borderRadius: "5px",
             outline: "none",
             height: "100%",
+            backgroundColor:'transparent'
         },
         label: {
             fontSize: 18
@@ -51,7 +52,7 @@ function TextInputWithIcon(props) {
             <div className="text-start d-lg-none">
                 <div className="d-flex shadow pe-2" style={style.outline2}>
                     <img className="me-2 ps-3" src={props.icon} style={style.icon} />
-                    <label htmlFor="email" className="w-100">
+                    <label htmlFor="email" className="w-100 bg-transparent">
                         <input style={style.input} {...props} />
                     </label>
                 </div>

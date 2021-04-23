@@ -5,7 +5,7 @@ function NbSelect({
     selectedItem,
     placeholder,
     options = [],
-    error, id, label, required,bordered
+    error, id, label, required, bordered
 }) {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     return (
@@ -16,7 +16,7 @@ function NbSelect({
             {/* for desktop */}
             <div className="cursor-pointer d-none d-lg-block">
                 <Dropdown
-                    className="d-inline-block position-relative w-100 shadow br"
+                    className="d-inline-block position-relative w-100 shadow-lg br-sm"
                     onToggle={() => setIsPopupOpen(!isPopupOpen)}
                     id={id}
                 >
@@ -26,7 +26,7 @@ function NbSelect({
                         style={{
                             // border: error ? "2px solid #f00" : "0px solid #acd4ff",
                             border: bordered ? "2px solid var(--nb_primary__light)" : "0px solid var(--nb_primary__light)",
-                            borderRadius: "8px",
+                            borderRadius: "5px",
                             height: 50,
                             padding: "6px 10px",
                             width: "100%",
@@ -35,7 +35,7 @@ function NbSelect({
                         <span
                             id="selected-item"
                             className="my-auto"
-                            style={{ color: selectedItem ? "#000" : "grey" ,fontSize:16}}
+                            style={{ color: selectedItem ? "#000" : "grey", fontSize: 16 }}
                         >
                             {selectedItem || placeholder}
                         </span>{" "}
@@ -72,9 +72,10 @@ function NbSelect({
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
+            {/* for mobile */}
             <div className="cursor-pointer d-lg-none">
                 <Dropdown
-                    className="d-inline-block position-relative w-100 shadow br"
+                    className="d-inline-block position-relative w-100 shadow-sm br"
                     onToggle={() => setIsPopupOpen(!isPopupOpen)}
                     id={id}
                 >
@@ -97,7 +98,7 @@ function NbSelect({
                             {selectedItem || placeholder}
                         </span>{" "}
                         <i
-                            className="fa fa-chevron-down my-auto transition-all fs-4"
+                            className="fa fa-chevron-down my-auto transition-all fs-6"
                             aria-hidden="true"
                             style={{
                                 transform: isPopupOpen ? "rotate(-180deg)" : "rotate(0deg)",

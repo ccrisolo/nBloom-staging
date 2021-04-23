@@ -42,7 +42,7 @@ function TextInput(props) {
                 </div>
             </div>
             <div className="text-start d-lg-none">
-                <div className="shadow-lg px-2" style={style.outline2}>
+                <div className="shadow-sm px-2" style={style.outline2}>
                     <label htmlFor="email" className="w-100">
                         <input style={style.input} {...props} />
                     </label>

@@ -39,7 +39,7 @@ function Login() {
                 } />
 
             <div className="">
-                <div className="text-lg-center ap-title my-3 d-none d-lg-inline-block">
+                <div className="text-center ap-title my-3 d-none d-lg-block ">
                     Login
                 </div>
                 <div className="text-lg-center ap-title my-3 d-lg-none">
@@ -72,19 +72,20 @@ function Login() {
                         <button className="btn btn-secondary w-100 w-lg-75 my-3 br py-2" type="submit">Next </button>
                     </div>
                 </form>
-                <div className="position-relative my-2 d-none d-lg-block" style={{ border: ".1px solid rgba(0,0,0,0.2)" }}>
+                <div className="position-relative my-2 my-lg-3 my-xl-3 my-xxl-4 d-none d-lg-block" style={{ border: ".1px solid #707070" }}>
                     <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-13px" }}>OR</span>
                 </div>
                 <div className="nb-text__sm d-lg-none text-center">
                     or you can easily sign in with
                 </div>
-                <div className="row my-2 justify-content-center">
+                <div className="row justify-content-center">
                     <div className="col-lg-12 col-3">
                         <OutlineButtonIcon
                             className="my-2 mx-auto px-3"
                             borderRadius="50px"
-                            outlineColor="#707070"
-                            outlineWidth="1px"
+                            outlineColor="#D3D3D3"
+                            outlineWidth="2px"
+                            onClick={() => window.open("https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin")}
                             Icon={<img src={GoogleIcom} alt="" style={{ width: 30, height: 30 }} className="mx-2" />}
                             label="Continue with google"
                         />
@@ -92,10 +93,11 @@ function Login() {
                     <div className="col-1 my-auto d-lg-none nb-text__sm d-inline-block">OR</div>
                     <div className="col-lg-12 col-3">
                         <OutlineButtonIcon
-                            outlineWidth="1px"
+                            outlineWidth="2px"
                             className="my-2 mx-auto px-3"
                             borderRadius="50px"
-                            outlineColor="#707070"
+                            outlineColor="#D3D3D3"
+                            onClick={() => window.open("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin")}
                             Icon={<img src={LinkedInIcon} alt="" style={{ width: 30, height: 30 }} className="mx-2" />}
                             label="Continue with LinkedIn"
                         />

@@ -2,12 +2,18 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ExcitedImage from '../assets/excited.svg'
 import NotYetImage from '../assets/notyet.svg'
+import MobileBackButton from '../Components/MobileBackButton'
 
 function CoachProfile(p) {
     const navigate = useNavigate()
     const [notYet, setNotYet] = useState(false)
     return (
-        <div className="container-fluid">
+        <div className="container-fluid px-0">
+            <div className="mx-2 my-4">
+                <MobileBackButton
+                    onClick={() => navigate(-1)}
+                />
+            </div>
             <div className="container-xl text-center">
                 <div className="d-flex justify-content-between">
                     <button
@@ -16,18 +22,11 @@ function CoachProfile(p) {
                         onClick={() => navigate(-1)}
                     >
                         Back
-                        </button>
-                    <div
-                        style={{ color: '#6666FF', fontSize: 17 }}
-                        className="d-lg-none my-2"
-                        onClick={() => navigate(-1)}
-                    >
-                        <i className="fa fa-chevron-left"></i> Back
-                        </div>
+                    </button>
                 </div>
                 {notYet ?
                     <div >
-                        <div className="nb-heading__sub text-start text-lg-center">
+                        <div className="ap-desc__bold text-start text-lg-center my-3 my-lg-0">
                             <div>
                                 No Worries,
                              </div>
@@ -35,10 +34,10 @@ function CoachProfile(p) {
                                 You Can Do It Later!!
                             </div>
                         </div>
-                        <div className="my-">
+                        <div className="my-5 my-lg-3">
                             <img className="img-fluid" src={NotYetImage} alt="" />
                         </div>
-                        <div className="text-center nb-text__bold">
+                        <div className="text-center ap-desc__bold my-3 my-lg-2">
                             Take me to...
                          </div>
                         <div className="row justify-content-center mt-lg-3">
@@ -54,16 +53,16 @@ function CoachProfile(p) {
                                     style={{ background: '#C5ADEE', }}
                                     onClick={() => navigate('/')}
                                 >
-                                   Browse Coachees
+                                    Browse Coachees
                             </button>
                             </div>
                         </div>
                     </div>
                     : <div >
-                        <div className="nb-heading__sub text-start text-lg-center">
+                        <div className="ap-desc__bold text-start text-lg-center my-3 my-lg-0">
                             <div>
                                 Great!
-                        </div>
+                            </div>
                             <div className="my-1">
                                 So Excited to Have You!
                         </div>
@@ -71,7 +70,7 @@ function CoachProfile(p) {
                         <div className="my-">
                             <img className="img-fluid" src={ExcitedImage} alt="" />
                         </div>
-                        <div className="text-center nb-text__bold">
+                        <div className="text-center ap-desc__bold my-3 my-lg-4">
                             Ready to create coach profile ?
                     </div>
                         <div className="row justify-content-center mt-lg-3">

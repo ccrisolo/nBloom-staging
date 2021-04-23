@@ -12,10 +12,10 @@ function CoachCreate1() {
     const [takingClients, setTakingClients] = useState(false)
     return (
         <div>
-             <div className="d-lg-none mt-3">
+            <div className="d-lg-none mt-3">
                 <MobileBackButton onClick={() => navigate(-1)} />
                 <div className="ap-heading my-2 my-lg-5">
-                Create a coach profile
+                    Create a coach profile
                 </div>
                 <div className="step-text mt-3">
                     Section 1 of 4
