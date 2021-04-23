@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="56" viewBox="0 0 60 56">
+  <g id="ico_24_actions_calendar_note" data-name="ico / 24 / actions / calendar_note" transform="translate(14)">
+    <rect id="Bounding_box" data-name="Bounding box" width="32" height="32" fill="rgba(255,255,255,0)"/>
+    <path id="Icon_color" data-name="Icon color" d="M18.667,22H2.333A2.327,2.327,0,0,1,0,19.684V4.631A2.327,2.327,0,0,1,2.333,2.316H3.5V.579A.582.582,0,0,1,4.083,0H5.25a.582.582,0,0,1,.584.579V2.316h9.332V.579A.582.582,0,0,1,15.75,0h1.167A.582.582,0,0,1,17.5.579V2.316h1.167A2.327,2.327,0,0,1,21,4.631V19.684A2.327,2.327,0,0,1,18.667,22ZM2.333,6.948V19.684H18.667V6.948Zm8.751,9.263H5.25a.582.582,0,0,1-.584-.579V14.474a.582.582,0,0,1,.584-.579h5.834a.582.582,0,0,1,.583.579v1.158A.582.582,0,0,1,11.084,16.211Zm4.666-4.632H5.25A.582.582,0,0,1,4.666,11V9.842a.582.582,0,0,1,.584-.578h10.5a.582.582,0,0,1,.584.578V11A.582.582,0,0,1,15.75,11.579Z" transform="translate(6 5)" fill="#3e3e70"/>
+  </g>
+  <text id="consult" transform="translate(0 52)" font-size="17" font-family="Muli"><tspan x="0" y="0">Consult</tspan></text>
+</svg>

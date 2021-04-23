@@ -26,6 +26,7 @@
     width: 100%;
     height: 100%;
 }
+/* account page */
 .ap-title{
     font-weight: bold !important;
     font-size: 28px !important;
@@ -49,6 +50,25 @@
 
 .ap-label{
     font-size:16px !important;
+}
+
+/* browse coach page */
+.bc-name{
+    font-weight: bold;
+    font-size: 22px !important;
+}
+.bc-desc{
+    font-weight: normal;
+    font-size: 17px;
+}
+
+.bc-topic{
+    font-weight: bold;
+    font-size: 22 px;
+}
+.bc-topic__content{
+    font-weight: normal;
+    font-size: 14px;
 }
 
 @media (min-width:1600px) {
@@ -96,6 +116,21 @@
         font-size: 22px !important;
         font-weight: 300 !important;
     }
+    /* browse coach page */
+    .bc-name{
+        font-size: 26px !important;
+    }
+    .bc-desc{
+        font-size: 24px;
+    }
+
+    .bc-topic{
+        font-size: 26px;
+    }
+    .bc-topic__content{
+        font-size: 16px;
+    }
+
 }
 
 .control-dots{

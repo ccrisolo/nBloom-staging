@@ -5,6 +5,13 @@ import { ReactComponent as LinkedIn } from '../../assets/linkedin.svg'
 import { ReactComponent as FolderIcon } from '../../assets/folder.svg'
 import MessageIcon from '../../assets/message_b.svg'
 import { ReactComponent as BadgeIcon } from '../../assets/badge.svg'
+import { ReactComponent as CalenderIcon } from '../../assets/calender_wt.svg'
+import { ReactComponent as BookIcon } from '../../assets/book_wt.svg'
+import { ReactComponent as ThumbIcon } from '../../assets/thumbup.svg'
+import { ReactComponent as ClapIcon } from '../../assets/clap.svg'
+import { ReactComponent as CommentIcon } from '../../assets/comment.svg'
+
+import IconButton from '../IconButton'
 
 function ConsultCoachCard({
     image,
@@ -26,13 +33,13 @@ function ConsultCoachCard({
                 </div>
                 <div className="col-6 col-lg-8 nb-text__sm">
                     <div className="nb-text__bold__sm position-relative d-inline-block">
-                        <div>{name}</div>
+                        <div className="bc-name">{name}</div>
                         <div className="position-absolute" style={{ top: 0, right: -30 }}>
                             <BadgeIcon />
                         </div>
                     </div>
-                    {profileDescription?.map((pd, i) => <div key={i}>{pd}</div>)}
-                    <div className="mt-3">
+                    {profileDescription?.map((pd, i) => <div className="bc-desc" key={i}>{pd}</div>)}
+                    <div className="mt-3 bc-desc">
                         ${cost}/hr
                     </div>
                 </div>
@@ -42,13 +49,13 @@ function ConsultCoachCard({
                     <AudioPlayer
                         currentTime="3:12"
                         maxTime="5:59"
-                        style={{ width: '100%', fontSize: 16 }}
+                        style={{ width: '100%', fontSize: 14, borderRadius: 12 }}
                     />
                 </div>
                 <div className="text-end col-6 col-lg-2 order-lg-last">
                     <img src={MessageIcon} alt="" />
                 </div>
-                <div className="col-12 col-lg-6">
+                <div className="col-12 col-lg-6 my-3 my-lg-0">
                     {/* <img src={InstaIcon} alt="InstaIcon" /> */}
                     <InstaIcon className="mx-2 " fill="#3E3E70" width="40px" height="40px" />
                     <div className="my-auto d-inline-block">
@@ -57,28 +64,45 @@ function ConsultCoachCard({
                     <FolderIcon fill="#3E3E70" className="mx-2" width="40px" height="40px" />
                 </div>
             </div>
-            <div className="my-3 mt-lg-5">
-                <div className="nb-text__bold">
+            <div className="my-3 mt-lg-4">
+                <div className="bc-topic">
                     Purpose :
                 </div>
-                <div>
+                <div className="bc-topic__content">
                     {purpose}
                 </div>
             </div>
             <div className="my-3">
-                <div className="nb-text__bold">
+                <div className="bc-topic">
                     Specialties :
                 </div>
-                <div className="text-break">
+                <div className="bc-topic__content          text-break">
                     {specialities}
                 </div>
             </div>
             <div className="my-3">
-                <div className="nb-text__bold">
+                <div className="bc-topic">
                     Certifications :
                 </div>
-                <div>
+                <div className="bc-topic__content">
                     {certificaions}
+                </div>
+            </div>
+            <div className="row justify-content-between">
+                <div className="col-12 col-lg-6">
+                    <div className="d-inline-block me-2">
+                        <CalenderIcon />
+                    </div>
+                    <div className="d-inline-block mx-3">
+                        <BookIcon />
+                    </div>
+                </div>
+                <div className="col-12 col-lg-6 mt-3 my-lg-0 mt-lg-3" >
+                    <div className="d-flex justify-content-between" style={{ height: 'fit-content' }}>
+                        <IconButton icon={<ThumbIcon width="30" height="25" />} label="1" />
+                        <IconButton icon={<ClapIcon width="30" height="25" />} label="32" />
+                        <IconButton icon={<CommentIcon width="30" height="25" />} label="24" />
+                    </div>
                 </div>
             </div>
         </div>

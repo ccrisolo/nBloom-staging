@@ -39,7 +39,7 @@ function Login() {
                 } />
 
             <div className="">
-                <div className="text-center ap-title my-3 d-none d-lg-block ">
+                <div className="text-center ap-title my-2 d-none d-lg-block ">
                     Login
                 </div>
                 <div className="text-lg-center ap-title my-3 d-lg-none">
