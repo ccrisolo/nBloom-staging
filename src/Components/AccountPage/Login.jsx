@@ -72,8 +72,9 @@ function Login() {
                         <button className="btn btn-secondary w-100 w-lg-75 my-3 br py-2" type="submit">Next </button>
                     </div>
                 </form>
-                <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{ border: "0.2px solid #707070" }}>
-                    <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-13px" }}>OR</span>
+                <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{}}>
+                    <hr/>
+                    <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-10px" }}>OR</span>
                 </div>
                 <div className="nb-text__sm d-lg-none text-center">
                     or you can easily sign in with

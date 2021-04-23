@@ -72,8 +72,9 @@ const Signup = () => {
                     navigate('/auth/signup_2')
                 }}> Next</button>
             </div>
-            <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{ border: ".1px solid #707070" }}>
-                <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-13px" }}>OR</span>
+            <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{ border: "0px solid #707070" }}>
+                <hr/>
+                <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-10px" }}>OR</span>
             </div>
             <div className="nb-text__sm d-lg-none text-center">
                 or you can sign up with
