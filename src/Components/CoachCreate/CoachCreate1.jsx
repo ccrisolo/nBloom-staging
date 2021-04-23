@@ -22,6 +22,14 @@ function CoachCreate1() {
                 </div>
             </div>
             <div>
+                <div className="d-lg-flex justify-content-between d-none">
+                    <div className="ap-heading ">
+                        Create a coach profile
+                    </div>
+                    <div className="step-text">
+                        Section 1 of 4
+                    </div>
+                </div>
                 <div className="col-12 col-xl-9 col-lg-8 col-xxl-10">
                     <div className="ap-desc__bold my-lg-4">
                         Tell Us About Your Self

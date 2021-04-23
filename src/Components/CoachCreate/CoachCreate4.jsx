@@ -20,6 +20,20 @@ function CoachCreate4() {
                     Section 4 of 4
                 </div>
             </div>
+            <div className="d-lg-flex justify-content-between mb-2 d-none">
+                <div className="text-left" style={{ color: '#6666FF', height: 35 }}>
+                    <button
+                        style={{ color: '#6666FF', height: 50, verticalAlign: 'sub' }}
+                        className="btn btn-rounded shadow px-3"
+                        onClick={() => navigate(-1)}
+                    >
+                        Back
+                    </button>
+                </div>
+                <div className="step-text">
+                    Section 4 of 4
+                </div>
+            </div>
             <div className="ap-desc__bold my-1 mb-4     my-lg-5">
                 Start Booking Clients
             </div>
