@@ -70,12 +70,9 @@ function Singup1() {
                         placeholder="select one option" />
                 </div>
                 <div className="my-2 my-lg-5 text-center">
-                <button className="d-none d-lg-inline-block btn btn-secondary w-100 w-lg-75 my-3 br py-2" type="submit" style={{ width: 481, height: 74 }} onClick={() => {
-                    navigate('/auth/signup_3')
-                }}>Next </button>
-                <button onClick={() => {
-                    navigate('/auth/signup_3')
-                }} className="d-lg-none btn btn-secondary w-100 my-3 br py-2" type="submit">Next </button>
+                    <button
+                        className="btn btn-secondary w-100 w-lg-75 my-3 br-lg py-2"
+                        onClick={() => navigate('/auth/signup_3')}>Next</button>
                 </div>
             </div>
             <div className="d-lg-none my-0 my-lg-4">

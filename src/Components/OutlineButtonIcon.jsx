@@ -5,7 +5,7 @@ function OutlineButtonIcon({ onClick, Icon, label, borderRadius, outlineColor, o
         outline: {
             borderRadius: borderRadius,
             border: `${outlineWidth} solid ${outlineColor}`,
-            width: 414,
+            width: 364,
             fontSize: 22,
             height: 64,
             fontWieght: 300,

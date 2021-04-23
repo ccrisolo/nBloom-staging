@@ -45,7 +45,7 @@ const Signup = () => {
             <div className="text-lg-center ap-desc">
                 Let's get you onboarded, shall we?
             </div>
-            <div className="my-1 my-lg-4 mt-5 mt-lg-0">
+            <div className="my-1 my-lg-2 mt-5 mt-lg-0">
                 <TextInput
                     value={email}
                     label="Email"
@@ -53,7 +53,7 @@ const Signup = () => {
                     onInput={(e) => dispatch(updateUserCred({ email: e.target.value }))}
                 />
             </div>
-            <div className="my-2 my-xxl-3">
+            <div className="my-2">
                 <PasswordInput
                     label="Password"
                     placeholder="Enter your password"
@@ -68,15 +68,13 @@ const Signup = () => {
                     onInput={(e) => dispatch(updateUserCred({ cPassword: e.target.value }))} />
             </div>
             <div className="my-2 text-center">
-                <button className="d-none d-lg-inline-block btn btn-secondary w-100 w-lg-75 my-3 br py-2" type="submit" style={{ width: 481, height: 74 }} onClick={() => {
+                <button className="btn btn-secondary w-100 w-lg-75 my-4 mt-lg-5 br-lg py-2" onClick={() => {
                     navigate('/auth/signup_2')
-                }}>Next </button>
-                <button onClick={() => {
-                    navigate('/auth/signup_2')
-                }} className="d-lg-none btn btn-secondary w-100 my-3 br py-2" type="submit">Next </button>
+                }}> Next</button>
+                
             </div>
             <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{ border: "0px solid #707070" }}>
-                <hr />
+                <hr/>
                 <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-10px" }}>OR</span>
             </div>
             <div className="nb-text__sm d-lg-none text-center">
