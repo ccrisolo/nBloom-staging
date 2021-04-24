@@ -8,7 +8,7 @@ import Signup2 from "../Components/AccountPage/Signup2";
 import AccountPage from "../Pages/Auth/AccountPage";
 import Coach from "../Pages/Coach";
 import HomePage from "../Pages/HomePage";
-import MainPage from "../Pages/MainPage";
+import MainPage from "../Pages/MainPage/MainPage";
 import history from '../history'
 import CoachCreate from "../Pages/CoachCreate";
 import Header from "../Components/Header";
@@ -66,6 +66,7 @@ function MainLayout() {
                 </Route>
                 <Route path="/" element={<HomePage />} />
                 <Route path="*" element={<HomePage />} />
+                <Route path="/landing-page" element={<MainPage />} />
             </Routes>
         </BrowserRouter>
     )
