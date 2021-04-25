@@ -19,6 +19,8 @@ import CoachCreate4 from "../Components/CoachCreate/CoachCreate4";
 import CoachProfile from "../Pages/CoachProfile";
 import Consult from "../Pages/Consult";
 import { toggleNavbar } from '../store/actions/UI'
+import Message from '../Pages/Message';
+import BottomNavigation from '../Components/BottomNavigation';
 
 function MainLayout() {
     const showNavBar = useSelector(state => state.ui.showNavBar)
@@ -49,8 +51,10 @@ function MainLayout() {
             }
             <Routes >
                 <Route path="/dashboard" element={<HomePage />} />
+                <Route path="/message" element={<Message />} />
                 <Route path="/consult" element={<Consult />} />
                 <Route path="/coach" element={<Coach />} />
+                <Route path="/blog" element={<Coach />} />
                 <Route path="/coach/create" element={<CoachCreate />}>
                     <Route path={`/step_1`} element={<CoachCreate1 />} />
                     <Route path={`/step_2`} element={<CoachCreate2 />} />
@@ -67,6 +71,7 @@ function MainLayout() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="*" element={<HomePage />} />
             </Routes>
+            <BottomNavigation />
         </BrowserRouter>
     )
 }

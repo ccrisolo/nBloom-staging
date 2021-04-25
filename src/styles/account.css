@@ -70,7 +70,49 @@
     font-weight: normal;
     font-size: 14px;
 }
-
+/* coach profile (homepage) */
+.hp-card{
+    background: #FBEEE4 !important;
+}
+.hp-card__name{
+    font-weight: bold;
+    font-size: 18px !important;
+} 
+.hp-card__desc{
+    font-weight: normal;
+    font-size: 12px;
+}
+.hp-card__topic{
+    font-weight: bold;
+    font-size: 17px;
+}
+.hp-card__topic__cotent{
+    font-weight: 300;
+    font-size: 16px !important;
+}
+/* message screen */
+.mp-card{
+    
+}
+.mp-card__left{
+    height: fit-content;
+    padding-bottom: 80px;
+}
+.mp-user__name{
+    font-weight: bold;
+    font-size: 16px;
+    /* letter-spacing: -0.02em;  */
+}
+.mp-user__message{
+    font-family: Muli;
+    font-weight: normal;
+    font-size: 14px;
+    /* letter-spacing: -0.02em;     */
+}
+.mp-user__time{
+    font-weight: normal;
+    font-size: 11px;
+}
 @media (min-width:1600px) {
     .sign-up-btn{
         position: absolute;
@@ -130,7 +172,51 @@
     .bc-topic__content{
         font-size: 16px;
     }
-
+    /* coach profile */
+    .hp-card{
+        background: #FFF !important;
+    }
+    .hp-card__name{
+        font-size: 22px;
+    } 
+    .hp-card__desc{
+        font-size: 22px;
+    }
+    .hp-card__topic{
+        font-size: 27px;        
+    }
+    .hp-card__topic__cotent{
+        font-size: 23px;
+    }
+    /* message screen*/
+    /* message screen */
+    .mp-card{
+        
+    }
+    .mp-card__left{
+        height: 78vh;
+        overflow-y: scroll;
+        border-right: 1px solid #000;
+        padding-bottom: 0px;
+    }
+    .mp-card__left::-webkit-scrollbar{
+        display: none;
+    }
+    .mp-user__name{
+        font-weight: bold;
+        font-size: 16px;
+        /* letter-spacing: -0.02em;  */
+    }
+    .mp-user__message{
+        font-family: Muli;
+        font-weight: normal;
+        font-size: 14px;
+        /* letter-spacing: -0.02em;     */
+    }
+    .mp-user__time{
+        font-weight: normal;
+        font-size: 11px;
+    }
 }
 
 .control-dots{

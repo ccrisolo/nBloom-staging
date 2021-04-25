@@ -13,7 +13,7 @@ function Consult() {
                         <ConsultCoachCard
                             image={UserImage}
                             profileDescription={["Executive Coach", "Accepting Clients", "Open To Slide"]}
-                            name="David David David"
+                            name="David "
                             purpose="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et purus efficitur, pretium orci vitae."
                             certificaions="Exec Coach Cert - Verified"
                             specialities="#this#this#this#this#this#this#this#this#this#this"

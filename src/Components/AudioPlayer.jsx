@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-function AudioPlayer({ maxTime, currentTime, style }) {
+function AudioPlayer({ maxTime, currentTime, style, className }) {
     const [togglePlay, setTogglePlay] = useState(false)
     return (
-        <div className="br-sm d-inline-block shadow py-2 mx-1 p-1" style={style}>
+        <div className={`br-sm d-inline-block shadow ${className}`} style = { style } >
             <div className="d-flex justify-content-between">
                 <div className="cp nb-text-primary mx-2" onClick={() => setTogglePlay(!togglePlay)}>
                     {togglePlay ?
@@ -14,7 +14,7 @@ function AudioPlayer({ maxTime, currentTime, style }) {
                     {currentTime}/{maxTime}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

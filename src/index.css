@@ -32,6 +32,7 @@ body {
   overflow-x:hidden;
   font-weight: 300;
   font-size: 22px;
+
 }
 
 input::placeholder {
@@ -109,8 +110,9 @@ input{
   outline: none !important;
   font-weight: 700 !important;
   height: 50px;
-  font-size: 16px !important;
+  font-size: 16px;
   line-height: 20px !important;
+  transition: all .3s ease-in-out;
 }
 
 .btn-primary{
@@ -121,6 +123,28 @@ input{
 .btn-secondary{
   background:#3E3E70 !important;
   color: #fff;
+}
+
+.btn-violet{
+  background:#AE91DF !important;
+  border:1px solid #AE91DF !important;
+  color:#fff;
+}
+.btn-violet:hover{
+  /* border:1px solid #AE91DF !important; */
+  background:#fff !important;
+  color :#AE91DF;
+}
+
+.btn-violet__outline{
+  border:1px solid #AE91DF !important;
+  background:#fff;
+  color :#AE91DF;
+}
+
+.btn-violet__outline:hover{
+  background:#AE91DF !important;
+  color:#fff;
 }
 
 .btn-light{
@@ -143,4 +167,20 @@ input{
   background:white !important;
   color:#000 !important;
   border: 1px solid #000 !important;
+}
+.message-bg{
+  background: url(./assets/bg.svg);
+  /* background-position: top left; */
+  width: 100%;
+  height: 100%;
+  /* background:#000; */
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: 1900px 2000px;
+}
+
+@media (min-width:1300px) {
+  .message-bg{
+    background-size: 2500px 2400px;
+  }
 }

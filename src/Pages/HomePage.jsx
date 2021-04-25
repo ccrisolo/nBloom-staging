@@ -7,7 +7,7 @@ function HomePage() {
             <BackgroundImage />
             {/* <Header context="dashboard" /> */}
             <div className="container-fluid">
-                <div className="container-xl">
+                <div className="container-xl px-0">
                     <Card />
                     <Card />
                     <Card />

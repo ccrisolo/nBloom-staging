@@ -1,3 +1,7 @@
+import { useSelector } from 'react-redux'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import ShareIcon from '../../assets/share.svg'
 import AudioPlayer from '../AudioPlayer'
 import { ReactComponent as InstaIcon } from '../../assets/insta.svg'
@@ -12,6 +16,7 @@ import { ReactComponent as ClapIcon } from '../../assets/clap.svg'
 import { ReactComponent as CommentIcon } from '../../assets/comment.svg'
 
 import IconButton from '../IconButton'
+import Modal from '../Modal'
 
 function ConsultCoachCard({
     image,
@@ -22,8 +27,25 @@ function ConsultCoachCard({
     certificaions,
     cost
 }) {
+    const navigate = useNavigate()
+    const isAuth = useSelector(state => state.auth.isAuth)
+    const [showLoginModel, setShowLoginModel] = useState(false)
     return (
         <div className="br-lg p-3 position-relative" style={{ background: '#F1F0FE' }}>
+            <Modal show={showLoginModel} onClose={() => setShowLoginModel(false)} >
+                <div className="d-flex justify-content-between p-3">
+                    <div className="nb-text">
+                        You have to create an account to message, schedule consults, or book with coaches
+                    </div>
+                    <div className="nb-text-primary">
+                        <i className="fa fa-times" onClick={() => setShowLoginModel(false)}></i>
+                    </div>
+                </div>
+                <div className="text-center w-100 my-3">
+                    <button className="btn btn-primary mx-2 px-5 " onClick={() => navigate('/auth')}>Sign Up</button>
+                    <button className="btn btn-outline mx-2 px-5" onClick={() => setShowLoginModel(false)}>Cancel</button>
+                </div>
+            </Modal>
             <div className="position-absolute" style={{ top: 20, right: 20 }}>
                 <img className="w-100" src={ShareIcon} alt="" />
             </div>
@@ -49,6 +71,7 @@ function ConsultCoachCard({
                     <AudioPlayer
                         currentTime="3:12"
                         maxTime="5:59"
+                        className="py-2"
                         style={{ width: '100%', fontSize: 14, borderRadius: 12 }}
                     />
                 </div>
@@ -91,10 +114,25 @@ function ConsultCoachCard({
             <div className="row justify-content-between">
                 <div className="col-12 col-lg-6">
                     <div className="d-inline-block me-2">
-                        <CalenderIcon />
+                        <CalenderIcon 
+                        className="cp"
+                        onClick={() => {
+                            if (isAuth)
+                                console.log('')
+                            else
+                                setShowLoginModel(true)
+                        }} />
                     </div>
                     <div className="d-inline-block mx-3">
-                        <BookIcon />
+                        <BookIcon
+                            className="cp"
+                            onClick={() => {
+                                if (isAuth)
+                                    console.log('')
+                                else
+                                    setShowLoginModel(true)
+                            }}
+                        />
                     </div>
                 </div>
                 <div className="col-12 col-lg-6 mt-3 my-lg-0 mt-lg-3" >
@@ -105,7 +143,7 @@ function ConsultCoachCard({
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

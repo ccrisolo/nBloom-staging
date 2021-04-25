@@ -9,6 +9,7 @@ import PasswordInput from "../PasswordInput"
 import TextInput from "../TextInput"
 
 import { changeAccountPageContext } from '../../store/actions/UI'
+import { authenticate } from '../../store/actions/auth'
 import ForgotPassword from './ForgotPassword';
 import Modal from '../Modal';
 import NbCheckbox from '../NbCheckbox';
@@ -24,6 +25,7 @@ function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault()
+        dispatch(authenticate(true))
         navigate('/consult')
     }
     return (
@@ -34,9 +36,9 @@ function Login() {
             <Modal
                 onClose={() => setShowForgotPassword(false)}
                 show={showForgotPassword}
-                body={
-                    <ForgotPassword onCancel={() => setShowForgotPassword(false)} />
-                } />
+            >
+                <ForgotPassword onCancel={() => setShowForgotPassword(false)} />
+            </Modal>
 
             <div className="">
                 <div className="text-center ap-title my-2 d-none d-lg-block ">
@@ -73,7 +75,7 @@ function Login() {
                     </div>
                 </form>
                 <div className="position-relative my-2 my-lg-4 d-none d-lg-block" style={{}}>
-                    <hr/>
+                    <hr />
                     <span className="position-absolute bg-white px-3 nb-text__sm" style={{ right: "50%", transform: 'translateX(50%)', top: "-10px" }}>OR</span>
                 </div>
                 <div className="nb-text__sm d-lg-none text-center">
