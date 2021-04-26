@@ -1,12 +1,14 @@
 import BackgroundImage from '../Components/BackgroundImage'
+import BottomNavigation from '../Components/BottomNavigation'
 import Card from '../Components/Card'
 
 function HomePage() {
     return (
-        <div className="w-100 position-relativeb">
+        <div className="position-relativeb">
+            <BottomNavigation />
             <BackgroundImage />
             {/* <Header context="dashboard" /> */}
-            <div className="container-fluid">
+            <div className="container-fluid mx-0">
                 <div className="container-xl px-0">
                     <Card />
                     <Card />

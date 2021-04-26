@@ -55,7 +55,9 @@ function CoachProfileCard({
                             }
                         </div>
                         <div className="align-items-end d-none d-lg-block mt-3">
-                            <AudioPlayer currentTime="3:12" maxTime="5:30" style={{ width: '25%', height: 40, fontSize: 18 }} />
+                            <AudioPlayer 
+                                className="py-2 px-2"
+                                currentTime="3:12" maxTime="5:30" style={{ width: '25%', height: 40, fontSize: 18,lineHeight:1.5 }} />
                         </div>
                     </div>
                 </div>

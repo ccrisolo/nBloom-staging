@@ -6,7 +6,7 @@ import ShareIcon from "../assets/share.svg";
 
 function Card() {
     return (
-        <div className="hp-card position-relative shadow p-lg-5 px-2 py-3 w-100 bg-white my-4 br">
+        <div className="hp-card position-relative shadow p-lg-5 px-2 py-3 w-100 bg-white my-4 br overflow-hidden">
             <div className="d-lg-none position-absolute" style={{ top: 10, right: 20 }}>
                 <img className="mx-2" src={MessageIcon} alt="" />
                 <img src={ShareIcon} alt="" />

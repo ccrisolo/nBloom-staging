@@ -113,6 +113,30 @@
     font-weight: normal;
     font-size: 11px;
 }
+/* blog page */
+.bp-container{
+    background:#fff !important;
+}
+.bp-card{
+
+}
+.bp-card__name{
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+}
+.bp-card__title {    
+    font-weight: bold;
+    font-size: 19px !important;
+    letter-spacing: -0.02em;
+}
+.bp-card__image{
+    width: 81px;
+    height: 88px;
+    border-radius: 6px;
+    overflow:hidden;
+}
+
 @media (min-width:1600px) {
     .sign-up-btn{
         position: absolute;
@@ -217,6 +241,26 @@
         font-weight: normal;
         font-size: 11px;
     }
+    .bp-container{
+        background:unset !important;
+    }
+    .bp-card{
+
+    }
+    .bp-card__name{
+        font-size: 16px;
+        letter-spacing: -0.02em;        
+    }
+    .bp-card__title {    
+        font-size: 21px;
+        letter-spacing: -0.02em;        
+    }
+    .bp-card__image{
+        width: 203px;
+        height: 212px;        
+        overflow:hidden;
+    }
+
 }
 
 .control-dots{

@@ -13,7 +13,7 @@ function BottomNavigation() {
                 <div onClick={()=>navigate('/')}>
                     <img src={HomeIcon} alt="" />
                 </div>
-                <div  onClick={()=>navigate('/')}>
+                <div  onClick={()=>navigate('/search')}>
                     <img src={SearchIcon} alt="" />
                 </div>
                 <div  onClick={()=>navigate('/blog')}>
@@ -22,7 +22,7 @@ function BottomNavigation() {
                 <div  onClick={()=>navigate('/message')}>
                     <img src={MessagesIcon} alt="" />
                 </div>
-                <div  onClick={()=>navigate('/')}>
+                <div  onClick={()=>navigate('/coach/profile')}>
                     <img src={ProfileIcon} alt="" />
                 </div>
             </div>
